@@ -1,0 +1,87 @@
+.subtitle {
+  margin: 80px 0 0 10px;
+  font-weight: bolder;
+}
+.btn {
+  margin-top: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.product-card {
+  margin-bottom: 50px;
+  .picture {
+    height: 60vh;
+    border-radius: 5px;
+    margin: 0 15px 0 15px;
+    img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover; // 填滿容器
+      object-position: 50% 10%;
+    }
+  }
+  h3 {
+    margin: 20px 0 30px 0;
+  }
+  p {
+    font-size: 18px;
+  }
+  .price {
+    margin: 20px 2px 30px 0;
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.info {
+  width: 470px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    h4 {
+      margin: 80px 0 0 10px;
+      font-weight: bolder;
+    }
+    span {
+      color: #bdbdbd;
+    }
+  }
+  p {
+    line-height: 36px;
+  }
+}
+.badge {
+  background-color: #757575;
+  color: #fff;
+}
+.same-card {
+  margin: 30px 0 100px 0;
+  .tab {
+    padding: 3px 15px;
+    background-color: red;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    border-radius: 5px;
+    span {
+      color: #ffffff;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+  }
+}
+
+.cart {
+  font-size: 30px;
+  vertical-align: middle;
+  p {
+    text-align: right;
+    letter-spacing: 1px;
+  }
+}

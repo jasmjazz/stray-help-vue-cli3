@@ -1,0 +1,21 @@
+<template>
+  <div>
+    <div class="container-fulid">
+      112
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Footer',
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.container-fulid {
+  background-color: #e0e0e0;
+  height: 300px;
+}
+</style>

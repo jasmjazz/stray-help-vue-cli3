@@ -89,7 +89,7 @@
     <div class="row same-card">
       <div class="card-group col-lg-4 col-md-6"
       v-for="item in getSame" :key="item.id">
-        <div class="card border-0">
+        <div class="card border-0" @click.prevent="takeSame(item.id)">
           <div class="tab"><span>急需</span></div>
           <div style="height: 250px; background-size: cover"
           :style="{backgroundImage: `url(${item.imageUrl})`}">
@@ -190,6 +190,13 @@ export default {
       }
       localStorage.setItem('cart', JSON.stringify(vm.cart));
       vm.getCart();
+    },
+    takeSame(id) {
+      this.$router.push(`/detail/${id}`);
+      this.getProduct(); // 轉換至對應商品的路徑並接住商品id，從api取得該商品資料，呈現於畫面上
+      window.scrollTo({
+        top: 300,
+      });
     },
   },
   computed: {

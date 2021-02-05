@@ -4,16 +4,16 @@
     <div class="row">
       <div class="col-11">
         <ul class="nav nav-tabs">
-          <li class="nav-item" @click="getCategory(3)">
+          <li class="nav-item" @click.prevent="getCategory(3)">
             <a class="nav-link" href="#" :class="{ active: category === 3 }">全部</a>
           </li>
-          <li class="nav-item" @click="getCategory(0)">
+          <li class="nav-item" @click.prevent="getCategory(0)">
             <a class="nav-link" href="#" :class="{ active: category === 0 }">主食</a>
           </li>
-          <li class="nav-item" @click="getCategory(1)">
+          <li class="nav-item" @click.prevent="getCategory(1)">
             <a class="nav-link" href="#" :class="{ active: category === 1 }">副食</a>
           </li>
-          <li class="nav-item" @click="getCategory(2)">
+          <li class="nav-item" @click.prevent="getCategory(2)">
             <a class="nav-link" href="#" :class="{ active: category === 2 }">零食</a>
           </li>
         </ul>
@@ -100,6 +100,11 @@ export default {
   created() {
     this.getProducts();
   },
+  mounted() {
+    window.scrollTo({
+      top: 0,
+    });
+  },
 };
 </script>
 
@@ -120,10 +125,6 @@ export default {
   .card {
     margin-bottom: 35px;
     cursor: pointer;
-  }
-  .badge {
-    background-color: #757575;
-    color: #fff;
   }
   .tab {
     padding: 3px 15px;

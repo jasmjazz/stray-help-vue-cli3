@@ -41,9 +41,33 @@ export default new VueRouter({
           component: () => import('./views/front/CheckCart.vue'),
         },
         {
+          path: 'userinfo',
+          name: 'UserInfo',
+          component: () => import('./views/front/UserInfo.vue'),
+        },
+        {
           path: 'ordercheck',
           name: 'OrderCheck',
           component: () => import('./views/front/OrderCheck.vue'),
+        },
+      ],
+    },
+    {
+      path: '/admin',
+      name: 'Dashboard',
+      component: () => import('./views/back/Dashboard.vue'),
+      children: [ // 巢狀路徑
+        {
+          path: 'feed',
+          name: 'Feed',
+          component: () => import('./views/back/Feed.vue'),
+          meta: { requiresAuth: true }, // 需經過驗證
+        },
+        {
+          path: 'orders',
+          name: 'Orders',
+          component: () => import('./views/back/Orders.vue'),
+          meta: { requiresAuth: true }, // 需經過驗證
         },
       ],
     },

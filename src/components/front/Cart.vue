@@ -2,67 +2,64 @@
   <div>
     <div class="desk-cart">
       <div class="icon" @click="checkcart">
-        <div class="num"><span>{{ cart.length }}</span></div>
+        <div v-if="cart.length > 0" class="num"><span>{{ cart.length }}</span></div>
         <i class="fas fa-shopping-cart cart"></i>
       </div>
     </div>
     <!--mobile-->
-    <!-- <div class="mobile-cart">
+    <div class="mobile-cart">
       <div class="icon">
         <div class="num"><span>{{ cart.length }}</span></div>
-        <i class="fas fa-shopping-bag"></i>
+        <i class="fas fa-shopping-cart cart"></i>
       </div>
-    </div> -->
+    </div>
     <!--aside-->
-    <!-- <div class="aside">
+    <div class="aside">
       <div class="list-group">
         <div class="list-group-item title">
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mt-2">選購糧食</h5>
-            <i class="fas fa-times close-open"
-              style="color: #ffffff; font-size: 18px; margin-top: 10px"></i>
+            <h5>糧食車</h5>
+            <i class="fas fa-times close-open"></i>
           </div>
         </div>
         <div v-if="cart.length === 0">
           <div class="d-flex w-100 justify-content-center">
-            <h6 class="mt-5">還沒有選購糧食哦</h6>
+            <h6>還沒有選購糧食哦</h6>
           </div>
         </div>
-        <div v-else v-for="item in cart" :key="item.id" class="list-group-item">
+        <div v-else class="list-group-item" v-for="item in cart" :key="item.id">
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">
-              <span v-if="item.category === 0" class="badge badge-success">主食</span>
-              <span v-else-if="item.category === 1" class="badge badge-success">副食</span>
-              <span v-else class="badge badge-success">零食</span>
-            </h5>
-            <small class="mt-1">
-              <a class="icon" @click.prevent="delCart(item.id)">
-                <i class="fas fa-trash" style="color: #ffffff; font-size: 16px"></i>
+            <h6 class="category">
+              <span v-if="item.category === 0" class="badge">主食</span>
+              <span v-else-if="item.category === 1" class="badge">副食</span>
+              <span v-else class="badge">零食</span>
+            </h6>
+            <small>
+              <a class="icon" href="#" @click.prevent="delCart(item.id)">
+                <i class="fas fa-trash"></i>
               </a>
             </small>
           </div>
-          <h5 class="mt-3 mb-2">{{ item.title }}</h5>
-          <h5>
-            {{ item.qty }} X NT {{ item.price | currency}}
-          </h5>
+          <h5>{{ item.title }}</h5>
+          <h6>
+            {{ item.qty }} x NT{{ item.price | currency}}
+          </h6>
         </div>
         <div class="d-flex w-100 justify-content-center">
-          <router-link v-if="cart.length === 0" :to="{ name: 'Category' }"
+          <router-link v-if="cart.length === 0" :to="{ name: 'Products' }"
             class="nav-link close-open">
-            <button type="button" class="btn btn-outline-light mt-4"
-              style="letter-spacing: 1px">
-                去逛逛
+            <button type="button" class="btn btn-primary">
+              去逛逛
             </button>
           </router-link>
           <router-link v-else :to="{ name: 'CheckCart' }" class="nav-link close-open">
-            <button type="button" class="btn btn-outline-light mt-4"
-              style="letter-spacing: 1px">
-                捐糧去
+            <button type="button" class="btn btn-primary">
+                付款去
             </button>
           </router-link>
         </div>
       </div>
-    </div> -->
+    </div>
     <!--emptyModal-->
     <div v-if="cart.length === 0" class="modal fade desk-modal" id="cartModal" tabindex="-1"
     role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -76,13 +73,12 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body" style="text-align: center">
-            <h4>還沒有選取糧食哦！</h4>
+          <div class="modal-body text-center">
+            <h5 style="font-weight: bold">還沒有選擇糧食哦！</h5>
           </div>
           <div class="modal-footer">
-            <router-link class="nav-link" :to="{ name: 'Category' }">
-              <button type="button" class="btn btn-dark btn-block" data-dismiss="modal"
-                style="letter-spacing: 1px">
+            <router-link class="nav-link" :to="{ name: 'Products' }">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">
                 去逛逛
               </button>
             </router-link>
@@ -117,23 +113,23 @@
               <tbody>
                 <tr v-for="item in cart" :key="item.id">
                   <td class="align-middle">
-                    <a class="icon" @click.prevent="delCart(item.id)">
+                    <a class="icon" href="#" @click.prevent="delCart(item.id)">
                       <i class="fas fa-trash" style="font-size: 20px"></i>
                     </a>
                   </td>
                   <td v-if="item.category === 0" class="align-middle s-no">
                     <h5>
-                      <span class="badge badge-dark">主食</span>
+                      <span class="badge">主食</span>
                     </h5>
                   </td>
                   <td v-else-if="item.category === 1" class="align-middle s-no">
                     <h5>
-                      <span class="badge badge-warning">副食</span>
+                      <span class="badge">副食</span>
                     </h5>
                   </td>
                   <td v-else class="align-middle s-no">
                     <h5>
-                      <span class="badge badge-info">零食</span>
+                      <span class="badge">零食</span>
                     </h5>
                   </td>
                   <td class="align-middle">
@@ -161,9 +157,8 @@
           </div>
           <div class="modal-footer">
             <router-link class="nav-link" :to="{ name: 'CheckCart' }">
-              <button type="button" class="btn btn-dark" data-dismiss="modal"
-                style="letter-spacing: 2px">
-                捐糧去
+              <button type="button" class="btn btn-primary" data-dismiss="modal">
+                付款去
               </button>
             </router-link>
           </div>
@@ -177,6 +172,7 @@
 import $ from 'jquery';
 
 export default {
+  name: 'Cart',
   data() {
     return {
       cart: [],

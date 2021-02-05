@@ -30,7 +30,7 @@
     <div class="iframe">
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item"
-          src="https://www.youtube.com/embed/l9itdKFvMz4?rel=0&autoplay=1&loop=1&playlist=l9itdKFvMz4"
+          src="https://www.youtube.com/embed/l9itdKFvMz4?rel=0"
           allow="autoplay; encrypted-media" allowfullscreen>
         </iframe>
       </div>

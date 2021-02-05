@@ -24,7 +24,12 @@
               </div>
             </div>
           </div>
-          <button type="button" class="btn btn-primary">伸出援手</button>
+          <router-link :to="{ name: 'Products' }">
+            <button type="button" class="btn">
+              <i class="fas fa-chevron-right"></i>
+              伸出援手
+            </button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -253,6 +258,7 @@
         </figure>
       </div>
     </div>
+    <div class="arrow"><i class="fas fa-angle-double-up"></i></div>
     <Footer />
   </div>
 </template>
@@ -288,9 +294,15 @@ export default {
     $('.carousel').carousel({
       interval: 4000,
     });
+    $('.arrow i').click(() => {
+      $('html, body').animate({
+        scrollTop: 0,
+      }, 1000);
+    });
   },
 };
 </script>
 
 <style scoped lang="scss">
+
 </style>

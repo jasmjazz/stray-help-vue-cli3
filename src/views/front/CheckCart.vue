@@ -1,15 +1,15 @@
 <template>
   <div class="wrap">
-    <!-- <Alert></Alert> -->
     <loading :active.sync="isLoading" loader="dots"></loading>
-    <div class="row">
+    <Alert />
+    <div class="row sop">
       <div class="col-md-4 col-sm-12">
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-success" role="alert" style="font-weight: bold">
           1. 糧食明細
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
-        <div class="alert alert-primray" role="alert">
+        <div class="alert alert-primary" role="alert">
           2. 填寫資料
         </div>
       </div>
@@ -19,11 +19,11 @@
         </div>
       </div>
     </div>
-    <!--Cart-->
+    <!--content-->
     <div class="card border-1">
       <div class="card-body checkcart">
         <h4 v-if="cart.length === 0" class="text-center"
-          style="padding: 50px">還沒有選擇糧食哦，去逛逛吧！</h4>
+          style="padding: 50px">還沒有選擇糧食哦！</h4>
         <ul v-else>
           <li v-for="item in cart" :key="item.id">
             <div class="row">
@@ -66,35 +66,53 @@
         </ul>
       </div>
     </div>
-    <!--Pay-->
-    <div class="row mt-4">
-      <div v-if="cart.length > 0" class="col-12" style="text-align: right">
-        <router-link :to="{ name: 'Category' }">
-          <button type="button" class="btn btn-primary" style="letter-spacing: 2px;
-            margin-right: 10px; font-weight: bold; font-size: 18px">
-            再逛逛
-          </button>
-        </router-link>
-        <button type="button" class="btn btn-primary"
-          style="letter-spacing: 2px; font-weight: bold; font-size: 17px"
-          @click="addCart">
+    <!--Button-->
+    <div class="row pay">
+      <div v-if="cart.length > 0" class="col text-right">
+        <button type="button" class="btn btn-primary" style="margin-right: 15px; opacity: 0.6"
+        @click.prevent="$router.push('/products')">
+          再逛逛
+        </button>
+        <button type="button" class="btn btn-primary" @click="nextStep">
           確定捐糧
         </button>
       </div>
-      <div v-else class="col-12" style="text-align: right">
-        <router-link :to="{ name: 'Category' }">
-          <button class="btn btn-warning" style="letter-spacing: 2px;
-            margin-right: 10px; font-weight: bold; font-size: 18px">
+      <div v-else class="col text-right">
+        <router-link :to="{ name: 'Products' }">
+          <button class="btn btn-primary">
             去逛逛
           </button>
         </router-link>
+      </div>
+    </div>
+    <!--Modal-->
+    <div class="modal" id="leaveModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">愛心助糧</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p><i class="fas fa-exclamation-circle"></i>
+            尚未完成助糧流程，請確認是否要離開此頁？
+          </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-stay" data-dismiss="modal">否</button>
+            <button type="button" class="btn btn-primary btn-leave" style="opacity: 0.6">是</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import Alert from '../../components/AlertMessage';
+import $ from 'jquery';
+import Alert from '@/components/AlertMessage.vue';
 
 export default {
   name: 'CheckCart',
@@ -103,10 +121,11 @@ export default {
       isLoading: false,
       cart: [],
       money: 0,
+      continue: false,
     };
   },
   components: {
-    // Alert,
+    Alert,
   },
   methods: {
     getCart() {
@@ -161,7 +180,7 @@ export default {
     // 加入server購物車
     addCart() {
       const vm = this;
-      const api = `${process.env.API_PATH}/api/${process.env.CUSTOM_PATH}/cart`;
+      const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/cart`;
       vm.isLoading = true;
       vm.cart = JSON.parse(localStorage.getItem('cart')) || [];
       vm.cart.forEach((item) => {
@@ -172,26 +191,49 @@ export default {
         vm.$http.post(api, { data: product }).then((response) => {
           if (response.data.success) {
             vm.isLoading = false;
-            this.$router.push('/userinfo');
+            vm.$router.push('/userinfo');
           }
         });
       });
     },
+    nextStep() {
+      this.continue = true;
+      this.addCart();
+      this.$router.push('/userinfo');
+    },
+  },
+  beforeRouteLeave(to, from, next) {
+    if (this.continue) {
+      next();
+    } else {
+      $('#leaveModal').modal('show');
+      $('.btn-stay').on('click', () => {
+        next(false);
+      });
+      $('.btn-leave').on('click', () => {
+        next();
+      });
+    }
   },
   created() {
     this.getCart();
   },
-  mounted() {
-    const height = window.outerHeight / 2;
-    window.scrollTo({
-      top: height,
-      behavior: 'smooth',
-    });
-  },
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
 ul {
   list-style-type: none;
+}
+.sop {
+  margin: 80px 0 30px 0;
+}
+.pay {
+  margin-bottom: 80px;
+}
+.modal-header {
+  background-color: #bdbdbd;
+  h5 {
+    font-weight: bold;
+  }
 }
 </style>

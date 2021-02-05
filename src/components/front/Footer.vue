@@ -13,7 +13,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .container-fulid {
   background-color: #e0e0e0;
   height: 300px;

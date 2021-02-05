@@ -79,7 +79,7 @@
                     placeholder="說說你的想法吧"></textarea>
                 </div>
                 <div class="text-right">
-                  <button type="button" class="btn btn-primary">填寫完成</button>
+                  <button type="submit" class="btn btn-primary">填寫完成</button>
                 </div>
               </form>
             </div>
@@ -130,9 +130,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.sop {
-  margin: 80px 0 30px 0;
-}
 .form {
   margin-bottom: 80px;
   .card {
@@ -150,6 +147,10 @@ export default {
   }
   input {
     margin-bottom: 5px;
+  }
+  .btn {
+    outline: none;
+    box-shadow: none;
   }
 }
 </style>

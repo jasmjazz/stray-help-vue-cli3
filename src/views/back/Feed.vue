@@ -301,7 +301,7 @@ export default {
       });
     },
     delModal(item) {
-      this.tempProduct = Object.assign({}, item);
+      this.tempProduct = { ...item };
       $('#deleteModal').modal('show');
     },
     deleteProduct() {

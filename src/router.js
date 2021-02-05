@@ -46,11 +46,16 @@ export default new VueRouter({
           component: () => import('./views/front/UserInfo.vue'),
         },
         {
-          path: 'ordercheck',
+          path: 'ordercheck/:orderId',
           name: 'OrderCheck',
           component: () => import('./views/front/OrderCheck.vue'),
         },
       ],
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: () => import('./views/Login.vue'),
     },
     {
       path: '/admin',
@@ -70,6 +75,10 @@ export default new VueRouter({
           meta: { requiresAuth: true }, // 需經過驗證
         },
       ],
+    },
+    {
+      path: '*',
+      redirect: '/login',
     },
   ],
 });

@@ -224,9 +224,6 @@ export default {
 ul {
   list-style-type: none;
 }
-.sop {
-  margin: 80px 0 30px 0;
-}
 .pay {
   margin-bottom: 80px;
 }

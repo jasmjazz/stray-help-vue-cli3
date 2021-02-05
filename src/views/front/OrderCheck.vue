@@ -1,29 +1,35 @@
 <template>
-  <div class="container">
+  <div class="wrap">
     <loading :active.sync="isLoading" loader="dots"></loading>
-    <div class="row mt-4" style="font-size: 16px">
+    <div class="row sop">
       <div class="col-md-4 col-sm-12">
-        <div class="alert alert-dark" role="alert">
+        <div class="alert alert-primary" role="alert">
           1. 糧食明細
+          <i class="fas fa-check-circle"></i>
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
-        <div class="alert alert-dark" role="alert">
+        <div class="alert alert-primary" role="alert">
           2. 填寫資料
+          <i class="fas fa-check-circle"></i>
         </div>
       </div>
       <div class="col-md-4 col-sm-12">
-        <div class="alert alert-success" style="font-weight: bold" role="alert">
+        <div v-if="!order.is_paid" class="alert alert-success" role="alert">
           3. 完成捐糧
+        </div>
+        <div v-else class="alert alert-primary" role="alert">
+          3. 完成捐糧
+          <i class="fas fa-check-circle"></i>
         </div>
       </div>
     </div>
     <!--Data-->
-    <div class="row">
-      <div class="col-lg-7 col-sm-12 mt-5">
+    <div class="row data">
+      <div class="col-lg-7 col-sm-12">
         <div class="card border-1">
           <div class="card-header bg-dark">
-            <h5 style="color: #ffffff">糧食明細</h5>
+            <h5>明細</h5>
           </div>
           <div class="card-body">
             <table class="table">
@@ -53,10 +59,10 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-sm-12 mt-5">
+      <div class="col-lg-5 col-sm-12">
         <h4 class="card">
           <div class="card-header bg-dark">
-            <h5 style="color: #ffffff">捐助人資訊</h5>
+            <h5>捐助人</h5>
           </div>
           <div class="card-body">
             <table class="table">
@@ -91,13 +97,34 @@
               </tbody>
             </table>
             <div class="text-right" v-if="order.is_paid === false">
-              <button class="btn btn-dark" @click="payOrder">確認付款</button>
+              <button type="button" class="btn btn-primary" @click="payOrder">
+                確認付款
+              </button>
             </div>
           </div>
         </h4>
         <div class="text-right"  v-if="order.is_paid === true">
-          <button class="btn btn-warning" style="font-weight: bold"
-            @click="$router.push('/')">回去逛逛</button>
+          <button type="button" class="btn btn-primary"
+            @click="$router.push('/products')">回去逛逛</button>
+        </div>
+      </div>
+    </div>
+    <!--Modal-->
+    <div class="modal fade" id="payModal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" >
+            <h5 class="modal-title">愛心助糧</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-3 d-flex align-items-center justify-content-center">
+            <h6>
+              <i class="fas fa-check-circle mr-2"></i>付款完成，謝謝你的愛心！
+            </h6>
+          </div>
         </div>
       </div>
     </div>
@@ -105,6 +132,8 @@
 </template>
 
 <script>
+import $ from 'jquery';
+
 export default {
   data() {
     return {
@@ -118,26 +147,28 @@ export default {
   methods: {
     getOrder() {
       const vm = this;
-      const api = `${process.env.API_PATH}/api/${process.env.CUSTOM_PATH}/order/${vm.orderId}`;
+      const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/order/${vm.orderId}`;
       vm.isLoading = true;
       vm.$http.get(api).then((response) => {
         if (response.data.success) {
-          vm.isLoading = false;
           vm.order = response.data.order;
         }
       });
+      vm.isLoading = false;
     },
     payOrder() {
       const vm = this;
-      const api = `${process.env.API_PATH}/api/${process.env.CUSTOM_PATH}/pay/${vm.orderId}`;
+      const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/pay/${vm.orderId}`;
       vm.isLoading = true;
       vm.$http.post(api).then((response) => {
         if (response.data.success) {
-          vm.isLoading = false;
-          vm.$bus.$emit('message: push', '捐糧成功');
           vm.getOrder();
+          $('#payModal').modal('show');
+        } else {
+          vm.$bus.$emit('message: push', '付款失敗', 'danger');
         }
       });
+      vm.isLoading = false;
     },
   },
   created() {
@@ -146,3 +177,25 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+.data {
+  margin-bottom: 80px;
+  h5 {
+    color: #ffffff;
+    margin-top: 8px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+}
+.modal-header {
+  background-color: #bdbdbd;
+  h5 {
+    font-weight: bold;
+  }
+}
+.btn {
+  outline: none;
+  box-shadow: none;
+}
+</style>

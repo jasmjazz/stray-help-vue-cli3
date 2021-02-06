@@ -1,5 +1,5 @@
 <template>
-  <div class="box box6">
+  <div class="box">
     <div class="content">
       <div class="card">
         <div class="card-body">
@@ -10,12 +10,12 @@
             </h4>
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" id="inputEmail" class="form-control"
-              placeholder="Email address" v-model="user.username" required autofocus>
+              placeholder="Email address" v-model="user.username" required>
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control"
               placeholder="Password" v-model="user.password" required>
             <button class="btn btn-lg btn-block mt-5" type="submit">Sign In</button>
-            <p class="mt-2">
+            <p class="mt-2 text-right">
               <router-link class="back-home" to="/">
                 <i class="fas fa-arrow-circle-left" style="margin-right: 5px"></i>Home
               </router-link>
@@ -42,14 +42,14 @@ export default {
   },
   methods: {
     signin() {
-      const api = `${process.env.VUE_APP_API}/admin/signin`;
       const vm = this;
-      this.$http.post(api, vm.user).then((response) => {
+      const api = `${process.env.VUE_APP_API}/admin/signin`;
+      vm.$http.post(api, vm.user).then((response) => {
         if (response.data.success) {
-          const token = response.data.token;
-          const expired = response.data.expired;
+          const { token } = response.data;
+          const { expired } = response.data;
           document.cookie = `hexToken=${token}; expires=${new Date(expired)};`;
-          vm.$router.push('/admin/products');
+          vm.$router.push('/admin/feed');
         }
       });
     },
@@ -61,21 +61,9 @@ export default {
 
 <style scoped>
 
-body {
-  position: relative;
-}
 .box {
   width: 100%;
-  margin: auto;
-  position: relative;
-}
-.box6 .content {
-  position: absolute;
-  margin: auto;
-  width: 400px;
-  top: 150px;
-  left: 40%;
-  transform: translateY(-20px);
+  margin-top: 150px;
 }
 
 h4 {
@@ -128,7 +116,5 @@ h4 {
 .back-home{
   text-decoration: none;
   color: #757575;
-  position: absolute;
-  right: 50px;
 }
 </style>

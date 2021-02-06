@@ -9,7 +9,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">
-            <router-link :to="{ name: 'About' }">關於</router-link>
+            <router-link :to="{ name: 'About' }">關於我們</router-link>
           </a>
         </li>
         <li class="nav-item">

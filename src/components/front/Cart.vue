@@ -2,7 +2,7 @@
   <div>
     <div class="desk-cart">
       <div class="icon" @click="checkcart">
-        <div v-if="cart.length > 0" class="num"><span>{{ cart.length }}</span></div>
+        <div v-if="sum > 0" class="num"><span>{{ sum }}</span></div>
         <i class="fas fa-shopping-cart cart"></i>
       </div>
     </div>
@@ -42,7 +42,7 @@
           </div>
           <h5>{{ item.title }}</h5>
           <h6>
-            {{ item.qty }} x NT{{ item.price | currency}}
+            {{ item.qty }} x NT{{ item.price | currency }}
           </h6>
         </div>
         <div class="d-flex w-100 justify-content-center">
@@ -173,10 +173,12 @@ import $ from 'jquery';
 
 export default {
   name: 'Cart',
+  props: ['sum'],
   data() {
     return {
       cart: [],
       money: 0,
+      length: 0,
     };
   },
   methods: {
@@ -184,6 +186,8 @@ export default {
       const vm = this;
       vm.money = 0;
       vm.cart = JSON.parse(localStorage.getItem('cart')) || [];
+      vm.length = vm.cart.length;
+      this.$emit('update', this.length);
       if (vm.cart.length > 0) {
         vm.cart.forEach((item) => {
           vm.money += item.total;
@@ -202,21 +206,16 @@ export default {
           vm.cart.splice(index, 1);
         }
       });
+      vm.$emit('sum', vm.length);
       localStorage.setItem('cart', JSON.stringify(vm.cart));
       vm.$bus.$emit('message: push', '已刪除糧食');
       vm.getCart();
-    },
-    cartList() {
-      setInterval(() => {
-        this.getCart();
-      }, 1000);
     },
   },
   created() {
     this.getCart();
   },
   mounted() {
-    this.cartList();
     $('.mobile-cart').click((e) => {
       e.preventDefault();
       $('body').toggleClass('open');

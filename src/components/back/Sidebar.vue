@@ -6,20 +6,18 @@
           align-items-center px-3 mt-2 mb-3 text-muted">
           <span>Admin</span>
         </h5>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <router-link class="nav-link" to='/back/products'>
-              <i class="fas fa-box-open"></i>
-              糧食列表
-            </router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to='/back/orders'>
-              <i class="far fa-list-alt"></i>
-              訂單列表
-            </router-link>
-          </li>
-        </ul>
+        <li class="nav-item">
+          <router-link class="nav-link" to='/admin/feed'>
+            <i class="fas fa-box-open"></i>
+            糧食列表
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to='/admin/orders'>
+            <i class="far fa-list-alt"></i>
+            訂單列表
+          </router-link>
+        </li>
       </div>
     </nav>
   </div>
@@ -32,4 +30,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+li {
+  list-style-type: none;
+}
 </style>

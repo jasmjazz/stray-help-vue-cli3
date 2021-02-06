@@ -75,7 +75,7 @@
             </table>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-dismiss="modal">OK</button>
+            <button type="button" class="btn btn-dark" data-dismiss="modal">確認</button>
           </div>
         </div>
       </div>

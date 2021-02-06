@@ -70,7 +70,7 @@ new Vue({
 
 router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth) { // 如果需要驗證
-    const api = `${process.env.API_PATH}/api/user/check`;
+    const api = `${process.env.VUE_APP_API}/api/user/check`;
     axios.post(api).then((response) => {
       if (response.data.success) {
         next();

@@ -1,62 +1,70 @@
 <template>
-  <div class="wrap">
-    <loading :active.sync="isLoading" loader="dots"></loading>
-    <div class="row">
-      <div class="col-11">
-        <ul class="nav nav-tabs">
-          <li class="nav-item" @click.prevent="getCategory(3)">
-            <a class="nav-link" href="#" :class="{ active: category === 3 }">全部</a>
-          </li>
-          <li class="nav-item" @click.prevent="getCategory(0)">
-            <a class="nav-link" href="#" :class="{ active: category === 0 }">主食</a>
-          </li>
-          <li class="nav-item" @click.prevent="getCategory(1)">
-            <a class="nav-link" href="#" :class="{ active: category === 1 }">副食</a>
-          </li>
-          <li class="nav-item" @click.prevent="getCategory(2)">
-            <a class="nav-link" href="#" :class="{ active: category === 2 }">零食</a>
-          </li>
-        </ul>
+  <div>
+    <div class="wrap">
+      <loading :active.sync="isLoading" loader="dots"></loading>
+      <div class="banner">
+        <img src="../../assets/image/img15.png" class="img-fluid gray" alt="流浪貓狗助糧平台">
+        <div class="text-box">
+          <h1>愛心糧食</h1>
+        </div>
       </div>
-      <div class="col-1">
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link">
-              <Cart />
-            </a>
-          </li>
-        </ul>
+      <div class="row">
+        <div class="col-11">
+          <ul class="nav nav-tabs">
+            <li class="nav-item" @click.prevent="getCategory(3)">
+              <a class="nav-link" href="#" :class="{ active: category === 3 }">全部</a>
+            </li>
+            <li class="nav-item" @click.prevent="getCategory(0)">
+              <a class="nav-link" href="#" :class="{ active: category === 0 }">主食</a>
+            </li>
+            <li class="nav-item" @click.prevent="getCategory(1)">
+              <a class="nav-link" href="#" :class="{ active: category === 1 }">副食</a>
+            </li>
+            <li class="nav-item" @click.prevent="getCategory(2)">
+              <a class="nav-link" href="#" :class="{ active: category === 2 }">零食</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-1">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link">
+                <Cart :sum = 'sum' @update="updateSum"/>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="products-card">
-      <div class="col-11">
-        <div class="row">
-          <div class="card-group col-md-4"
-          v-for="item in products" :key="item.id">
-            <div class="card border-0"
-            @click="$router.push(`/detail/${item.id}`)">
-              <div class="tab"><span>急需</span></div>
-              <div style="height: 240px; background-size: cover"
-              :style="{backgroundImage: `url(${item.imageUrl})`}">
-              </div>
-              <div class="card-body">
-                <h6>
-                  <span v-if="item.category === 0" class="badge">主食</span>
-                  <span v-else-if="item.category === 1" class="badge">副食</span>
-                  <span v-else class="badge">零食</span>
-                </h6>
-                <h5>
-                  <span style="font-weight: bold">{{ item.title }}</span>
-                  <span class="float-right">
-                    NT {{ item.price | currency}}
-                  </span>
-                </h5>
+      <div class="products-card">
+        <div class="col-11">
+          <div class="row">
+            <div class="card-group col-md-4"
+            v-for="item in products" :key="item.id">
+              <div class="card border-0"
+              @click="$router.push(`/detail/${item.id}`)">
+                <div class="tab"><span>急需</span></div>
+                <div style="height: 240px; background-size: cover"
+                :style="{backgroundImage: `url(${item.imageUrl})`}">
+                </div>
+                <div class="card-body">
+                  <h6>
+                    <span v-if="item.category === 0" class="badge badge-primary">主食</span>
+                    <span v-else-if="item.category === 1" class="badge badge-primary">副食</span>
+                    <span v-else class="badge badge-primary">零食</span>
+                  </h6>
+                  <h5>
+                    <span style="font-weight: bold">{{ item.title }}</span>
+                    <span class="float-right">
+                      NT {{ item.price | currency}}
+                    </span>
+                  </h5>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="col-1"></div>
       </div>
-      <div class="col-1"></div>
     </div>
   </div>
 </template>
@@ -71,12 +79,16 @@ export default {
       products: [],
       category: 3,
       itemProducts: [],
+      sum: 0,
     };
   },
   components: {
     Cart,
   },
   methods: {
+    updateSum(length) {
+      this.sum = length;
+    },
     getProducts() {
       const vm = this;
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/products/all`;
@@ -99,11 +111,6 @@ export default {
   },
   created() {
     this.getProducts();
-  },
-  mounted() {
-    window.scrollTo({
-      top: 0,
-    });
   },
 };
 </script>
@@ -137,6 +144,39 @@ export default {
       color: #ffffff;
       letter-spacing: 2px;
       font-weight: bold;
+    }
+  }
+  .card:hover {
+    cursor: pointer;
+    box-shadow: 6px 6px 6px #757575;
+  }
+}
+.banner {
+  img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  object-position: 50% 75%;
+  border-radius: 5px;
+  }
+  .text-box {
+    position: absolute;
+    margin: 0;
+    top: 30%;
+    left: 46%;
+    transform: translate(-38%, -46%);
+    width: calc(100% - 70%);
+    height: calc(100% - 80%);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 10px;
+    h1 {
+      font-weight: bold;
+      letter-spacing: 3px;
+      font-size: 60px;
+      color: #ffffff;
+      line-height: 150px;
+      text-align: center;
     }
   }
 }

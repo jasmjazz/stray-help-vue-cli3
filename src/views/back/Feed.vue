@@ -27,13 +27,13 @@
             </a>
           <td>
             <h5>
-              <span v-if="item.category === 0" class="badge">
+              <span v-if="item.category === 0" class="badge badge-dark">
                 主食
               </span>
-              <span v-else-if="item.category === 1" class="badge">
+              <span v-else-if="item.category === 1" class="badge badge-info">
                 副食
               </span>
-              <span v-else class="badge">
+              <span v-else class="badge badge-warning">
                 副食
               </span>
             </h5>

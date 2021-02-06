@@ -9,8 +9,8 @@
             <div class="text-box">
               <div class="carousel-caption d-md-block carousel-first">
                 <h1>流浪貓狗助糧平台</h1>
-                <p>對你來說，<br/>
-                牠只是你人生的一部分；</p>
+                <p>對你來說<br/>
+                牠只是你人生的一部分</p>
               </div>
             </div>
           </div>
@@ -19,8 +19,8 @@
             <div class="text-box">
               <div class="carousel-caption d-md-block carousel-second">
                 <h1>流浪貓狗助糧平台</h1>
-                <p>對牠來說，<br/>
-                你卻是牠的全世界。</p>
+                <p>對牠來說<br/>
+                你卻是牠的全世界</p>
               </div>
             </div>
           </div>

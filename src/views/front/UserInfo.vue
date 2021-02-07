@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="user-info">
     <div class="wrap">
       <loading :active.sync="isLoading" loader="dots"></loading>
       <div class="banner">
@@ -96,16 +96,47 @@
         </div>
       </div>
     </div>
+    <!--leaveModal-->
+    <div class="modal fade" id="leaveModal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-light" id="exampleModalLabel">愛心助糧</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              <i class="fas fa-exclamation-circle"></i>
+              助糧流程尚未完成，確定離開此頁？
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-stay" data-dismiss="modal">
+              否
+            </button>
+            <button type="button" class="btn btn-primary btn-leave" data-dismiss="modal"
+            style="opacity: 0.5">
+              是
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import $ from 'jquery';
 
 export default {
   name: 'UserInfo',
   data() {
     return {
       isLoading: false,
+      carts: [],
       form: {
         user: {
           name: '',
@@ -115,17 +146,21 @@ export default {
         },
         message: '',
       },
+      nextPage: false,
     };
   },
   methods: {
     createOrder() {
       const vm = this;
+      vm.addCart();
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/order`;
       const order = vm.form;
       vm.isLoading = true;
       vm.$http.post(api, { data: order }).then((response) => {
         if (response.data.success) {
           vm.isLoading = false;
+          vm.nextPage = true;
+          vm.carts = response.data.data;
           vm.$router.push(`/ordercheck/${response.data.orderId}`);
           localStorage.removeItem('cart');
         } else {
@@ -133,74 +168,46 @@ export default {
         }
       });
     },
+    // 加入server購物車
+    addCart() {
+      const vm = this;
+      const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/cart`;
+      vm.isLoading = true;
+      vm.cart = JSON.parse(localStorage.getItem('cart')) || [];
+      vm.cart.forEach((item) => {
+        const product = {
+          product_id: item.id,
+          qty: item.qty,
+        };
+        vm.$http.post(api, { data: product }).then((response) => {
+          if (response.data.success) {
+            vm.isLoading = false;
+            vm.$router.push('/userinfo');
+          }
+        });
+      });
+    },
+  },
+  beforeRouteLeave(to, from, next) {
+    const vm = this;
+    if (vm.nextPage) {
+      next();
+    } else {
+      $('#leaveModal').modal('show');
+      $('.btn-stay').on('click', () => {
+        next(false);
+      });
+      $('.btn-leave').on('click', () => {
+        next();
+        // vm.removeCart();
+      });
+    }
   },
 };
 </script>
 
 <style scoped lang="scss">
-.form {
-  margin-bottom: 80px;
-  .card {
-    background-color: inherit;
-  }
-  .title {
-    margin: 30px 0 30px 0;
-    font-weight: bold;
-  }
-  i {
-    margin-right: 5px;
-  }
-  label {
-    font-size: 17px;
-  }
-  input {
-    margin-bottom: 5px;
-  }
-  .btn {
-    outline: none;
-    box-shadow: none;
-  }
-}
 .modal-header {
-  background-color: #bdbdbd;
-  h5 {
-    font-weight: bold;
-  }
-}
-.modal-body {
-  p {
-    margin-top: 15px;
-    font-size: 18px;
-  }
-}
-.banner {
-  img {
-  width: 100%;
-  height: 45vh;
-  object-fit: cover;
-  object-position: 50% 60%;
-  border-radius: 5px;
-  opacity: 0.9;
-  }
-  .text-box {
-    position: absolute;
-    margin: 0;
-    top: 30%;
-    left: 46%;
-    transform: translate(-38%, -46%);
-    width: calc(100% - 70%);
-    height: calc(100% - 80%);
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 10px;
-    h1 {
-      font-weight: bold;
-      letter-spacing: 3px;
-      font-size: 60px;
-      color: #ffffff;
-      line-height: 150px;
-      text-align: center;
-    }
-  }
+  background-color: #616161;
 }
 </style>

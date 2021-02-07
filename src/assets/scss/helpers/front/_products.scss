@@ -14,6 +14,7 @@
       object-fit: cover;
       object-position: 50% 75%;
       border-radius: 5px;
+      opacity: 0.9;
     }
     .text-box {
       position: absolute;
@@ -26,9 +27,13 @@
       background-color: rgba(0, 0, 0, 0.25);
       z-index: 1;
       border-radius: 10px;
-      @include x-small {
+      @include large {
         width: calc(100% - 50%);
         height: calc(100% - 80%);
+      }
+      @include x-small {
+        width: calc(100% - 40%);
+        height: calc(100% - 85%);
       }
       h1 {
         font-weight: bold;
@@ -37,9 +42,17 @@
         color: #ffffff;
         line-height: 150px;
         text-align: center;
+        @include large {
+          font-size: 60px;
+          line-height: 280px;
+        }
+        @include medium {
+          font-size: 60px;
+          line-height: 200px;
+        }
         @include x-small {
-          font-size: 40px;
-          line-height: 130px;
+          font-size: 36px;
+          line-height: 120px;
         }
       }
     }

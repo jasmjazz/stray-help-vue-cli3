@@ -11,6 +11,9 @@
 
 .product-card {
   margin-bottom: 50px;
+  @include large {
+    margin-bottom: 5px;
+  }
   .picture {
     height: 60vh;
     border-radius: 5px;
@@ -20,6 +23,9 @@
       height: 60vh;
       object-fit: cover; // 填滿容器
       object-position: 50% 10%;
+      @include large {
+        height: 35vh;
+      }
     }
   }
   h3 {
@@ -27,6 +33,9 @@
   }
   p {
     font-size: 18px;
+  }
+  .card {
+    margin: 0 15px 0 0;
   }
   .price {
     margin: 20px 2px 30px 0;
@@ -48,6 +57,9 @@
     h4 {
       margin: 80px 0 0 10px;
       font-weight: bolder;
+      @include large {
+        margin-top: 5px;
+      }
     }
     span {
       color: #bdbdbd;
@@ -56,10 +68,6 @@
   p {
     line-height: 36px;
   }
-}
-.badge-primary {
-  background-color: #8e8e8e;
-  color: #ffffff;
 }
 .same-card {
   margin: 30px 0 100px 0;
@@ -98,6 +106,7 @@
     object-fit: cover;
     object-position: 50% 75%;
     border-radius: 5px;
+    opacity: 0.9;
   }
   .text-box {
     position: absolute;
@@ -110,9 +119,13 @@
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 1;
     border-radius: 10px;
-    @include x-small {
+    @include large {
       width: calc(100% - 50%);
       height: calc(100% - 80%);
+    }
+    @include x-small {
+      width: calc(100% - 40%);
+      height: calc(100% - 85%);
     }
     h1 {
       font-weight: bold;
@@ -121,9 +134,17 @@
       color: #ffffff;
       line-height: 150px;
       text-align: center;
+      @include large {
+        font-size: 60px;
+        line-height: 280px;
+      }
+      @include medium {
+        font-size: 60px;
+        line-height: 200px;
+      }
       @include x-small {
-        font-size: 40px;
-        line-height: 130px;
+        font-size: 36px;
+        line-height: 120px;
       }
     }
   }

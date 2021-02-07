@@ -1,9 +1,26 @@
-.check-cart {
-  ul {
-    list-style-type: none;
-  }
-  .pay {
-    margin-bottom: 40px;
+.user-info {
+  .form {
+    margin-bottom: 80px;
+    .card {
+      background-color: inherit;
+    }
+    .title {
+      margin: 30px 0 30px 0;
+      font-weight: bold;
+    }
+    i {
+      margin-right: 5px;
+    }
+    label {
+      font-size: 17px;
+    }
+    input {
+      margin-bottom: 5px;
+    }
+    .btn {
+      outline: none;
+      box-shadow: none;
+    }
   }
   .modal-header {
     background-color: #bdbdbd;
@@ -15,27 +32,6 @@
     p {
       margin-top: 15px;
       font-size: 18px;
-    }
-  }
-  .cart {
-    h4 {
-      padding: 50px;
-    }
-  }
-  .message {
-    margin: 50px 0 60px 5px;
-    letter-spacing: 1px;
-    h6 {
-      font-size: 20px;
-      opacity: 0.7;
-    }
-    i {
-      margin-right: 5px;
-    }
-    p {
-      font-size: 15px;
-      line-height: 30px;
-      color: #333;
     }
   }
   .banner {
@@ -87,10 +83,5 @@
         }
       }
     }
-  }
-  .total {
-    text-align: right;
-    font-weight: bold;
-    font-size: 18px;
   }
 }

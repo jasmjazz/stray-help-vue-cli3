@@ -77,7 +77,7 @@
         </div>
         <div class="row slogan-two">
           <div class="col-12">
-            <h4>「一份糧食，一份希望，讓愛不流浪。」</h4>
+            <h4>「一份糧食，一份希望。」</h4>
             <hr/>
           </div>
         </div>
@@ -255,6 +255,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="container">
       <div class="picture">
         <figure class="figure">
           <img src="../assets/image/picture01.png"

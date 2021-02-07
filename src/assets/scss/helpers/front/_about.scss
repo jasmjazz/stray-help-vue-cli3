@@ -18,8 +18,9 @@
       line-height: 50px;
       letter-spacing: 1px;
       @include x-small {
-        font-size: 14px;
-        line-height: 40px;
+        font-size: 12px;
+        line-height: 30px;
+        padding: 0 5px 0 5px;
       }
     }
     span {
@@ -28,6 +29,7 @@
   }
   .content {
     text-align: center;
+    padding: 0 5px 0 5px;
     h5 {
       font-size: 24px;
       margin-bottom: 20px;
@@ -61,6 +63,9 @@
       height: 60vh;
       object-fit: cover; // 填滿容器
       object-position: 50% 50%;
+      @include x-small {
+        height: auto;
+      }
     }
   }
   .banner {
@@ -83,9 +88,13 @@
       background-color: rgba(0, 0, 0, 0.1);
       z-index: 1;
       border-radius: 10px;
-      @include x-small {
+      @include large {
         width: calc(100% - 50%);
         height: calc(100% - 80%);
+      }
+      @include x-small {
+        width: calc(100% - 40%);
+        height: calc(100% - 85%);
       }
       h1 {
         font-weight: bold;
@@ -94,9 +103,17 @@
         color: #ffffff;
         line-height: 150px;
         text-align: center;
+        @include large {
+          font-size: 60px;
+          line-height: 280px;
+        }
+        @include medium {
+          font-size: 60px;
+          line-height: 200px;
+        }
         @include x-small {
-          font-size: 40px;
-          line-height: 130px;
+          font-size: 36px;
+          line-height: 120px;
         }
       }
     }

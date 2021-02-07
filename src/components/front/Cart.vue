@@ -18,7 +18,7 @@
       <div class="list-group">
         <div class="list-group-item title">
           <div class="d-flex w-100 justify-content-between">
-            <h5>糧食車</h5>
+            <h5>購物車</h5>
             <i class="fas fa-times close-open"></i>
           </div>
         </div>
@@ -67,7 +67,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title" id="exampleModalLabel">
-              糧食車
+              購物車
             </h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -93,7 +93,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h4 class="modal-title" id="exampleModalLabel">
-              糧食車
+              購物車
             </h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>

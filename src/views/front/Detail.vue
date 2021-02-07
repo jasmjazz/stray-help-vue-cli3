@@ -69,7 +69,7 @@
                   <i v-if="loadingItem"
                   class="fas fa-spinner fa-spin">
                   </i>
-                  加入糧食車
+                  加入購物車
                 </button>
               </div>
             </div>

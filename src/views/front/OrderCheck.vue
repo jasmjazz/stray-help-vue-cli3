@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="wrap order-check">
+  <div class="order-check">
+    <div class="wrap">
       <loading :active.sync="isLoading" loader="dots"></loading>
       <div class="banner">
         <img src="../../assets/image/picture04.png" class="img-fluid" alt="流浪貓狗助糧平台">
@@ -135,6 +135,35 @@
           </div>
         </div>
       </div>
+      <!--leaveModal-->
+      <div class="modal fade" id="leaveModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-light" id="exampleModalLabel">愛心助糧</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>
+                <i class="fas fa-exclamation-circle"></i>
+                付款尚未完成，離開將會清空所有記錄，確定離開？
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary btn-stay" data-dismiss="modal">
+                否
+              </button>
+              <button type="button" class="btn btn-primary btn-leave" data-dismiss="modal"
+              style="opacity: 0.5">
+                是
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -150,6 +179,7 @@ export default {
       order: {
         user: {},
       },
+      nextPage: false,
     };
   },
   methods: {
@@ -170,14 +200,41 @@ export default {
       vm.isLoading = true;
       vm.$http.post(api).then((response) => {
         if (response.data.success) {
+          vm.isLoading = false;
           vm.getOrder();
           $('#payModal').modal('show');
+          vm.nextPage = true;
         } else {
+          vm.isLoading = false;
           vm.$bus.$emit('message: push', '付款失敗', 'danger');
         }
       });
-      vm.isLoading = false;
     },
+    removeCart() {
+      const vm = this;
+      vm.getCart();
+      vm.carts.carts.forEach((item) => {
+        const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/cart/${item.id}`;
+        vm.$http.delete(api).then((response) => {
+          vm.$bus.$emit('message:push', response.data.message, 'success');
+        });
+      });
+    },
+  },
+  beforeRouteLeave(to, from, next) {
+    const vm = this;
+    if (vm.nextPage) {
+      next();
+    } else {
+      $('#leaveModal').modal('show');
+      $('.btn-stay').on('click', () => {
+        next(false);
+      });
+      $('.btn-leave').on('click', () => {
+        next();
+        // vm.removeCart();
+      });
+    }
   },
   created() {
     this.orderId = this.$route.params.orderId;
@@ -187,5 +244,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.modal-header {
+  background-color: #616161;
+}
 </style>

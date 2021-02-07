@@ -8,6 +8,9 @@
   font-weight: bold;
   letter-spacing: 2px;
 }
+.title {
+  font-weight: bold;
+}
 
 .product-card {
   margin-bottom: 50px;
@@ -26,6 +29,9 @@
       @include large {
         height: 35vh;
       }
+      @include x-small {
+        height: auto;
+      }
     }
   }
   h3 {
@@ -36,11 +42,20 @@
   }
   .card {
     margin: 0 15px 0 0;
+    @include x-small {
+      margin: -120px 15px 0 15px;
+    }
   }
   .price {
     margin: 20px 2px 30px 0;
     span {
       font-weight: bold;
+    }
+  }
+  .text {
+    margin-top: 10px;
+    @include x-small {
+      margin-left: 15px;
     }
   }
 }
@@ -51,6 +66,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include x-small {
+    width: 100%;
+    margin-top: 80px;
+  }
   .title {
     text-align: center;
     margin-bottom: 20px;

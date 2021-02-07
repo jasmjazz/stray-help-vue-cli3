@@ -11,7 +11,7 @@
       </div>
       <div class="row sop">
         <div class="col-md-4 col-sm-12">
-          <div class="alert alert-success" role="alert" style="font-weight: bold">
+          <div class="alert alert-success" role="alert">
             1. 糧食明細
           </div>
         </div>
@@ -35,7 +35,7 @@
               <div class="row">
                 <div class="col-2 p-0">
                   <a class="icon" href="#" @click.prevent="delCart(item.id)">
-                    <i class="fas fa-trash trash" style="font-size: 18px"></i>
+                    <i class="fas fa-trash trash"></i>
                   </a>
                 </div>
                 <div class="col-7 p-0">
@@ -201,5 +201,8 @@ export default {
     margin-left: 15px;
     margin-right: 15px;
   }
+}
+.fa-trash {
+  font-size: 18px;
 }
 </style>

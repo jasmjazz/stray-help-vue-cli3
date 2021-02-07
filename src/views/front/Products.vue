@@ -53,7 +53,7 @@
                     <span v-else class="badge badge-primary">零食</span>
                   </h6>
                   <h5>
-                    <span style="font-weight: bold">{{ item.title }}</span>
+                    <span class="title">{{ item.title }}</span>
                     <span class="float-right">
                       NT {{ item.price | currency}}
                     </span>

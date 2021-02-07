@@ -15,7 +15,7 @@
             <i class="fas fa-check-circle"></i>
           </div>
         </div>
-        <div class="col-md-4 col-sm-12" style="font-weight: bold">
+        <div class="col-md-4 col-sm-12">
           <div class="alert alert-success" role="alert">
             2. 填寫資料
           </div>

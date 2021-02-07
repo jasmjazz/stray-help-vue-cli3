@@ -57,7 +57,7 @@
                   </tr>
                 </tbody>
                 <tfoot>
-                  <tr style="font-weight: bold">
+                  <tr>
                     <td colspan="2" class="text-right">總計</td>
                     <td class="text-right">{{ order.total | currency }}</td>
                   </tr>
@@ -246,5 +246,10 @@ export default {
 <style scoped lang="scss">
 .modal-header {
   background-color: #616161;
+}
+tfoot {
+  tr {
+    font-weight: bold;
+  }
 }
 </style>

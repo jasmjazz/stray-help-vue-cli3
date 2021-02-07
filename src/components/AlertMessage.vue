@@ -52,7 +52,7 @@ export default {
 .message-alert {
   position: fixed;
   max-width: 50%;
-  top: 120px;
+  top: 20px;
   right: 20px;
   font-size: 16px;
   padding: 5px;

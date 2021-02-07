@@ -74,7 +74,7 @@
               </div>
             </div>
           </div>
-          <p style="margin-top: 10px">※同個糧食至多選10組哦</p>
+          <p class="text">※同個糧食至多選10組哦</p>
         </div>
       </div>
       <div class="row info">
@@ -108,7 +108,7 @@
                 <span v-else class="badge badge-primary">零食</span>
               </h6>
               <h5>
-                <span style="font-weight: bold">{{ item.title }}</span>
+                <span class="title">{{ item.title }}</span>
                 <span class="float-right">
                   NT {{ item.price | currency}}
                 </span>

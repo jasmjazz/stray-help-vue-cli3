@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cart-style">
     <div class="desk-cart">
       <div class="icon" @click="checkcart">
         <div v-if="sum > 0" class="num"><span>{{ sum }}</span></div>
@@ -27,7 +27,7 @@
             <h6 class="content">還沒有選購糧食哦</h6>
           </div>
         </div>
-        <div v-else class="list-group-item" v-for="item in cart" :key="item.id">
+        <div class="list-group-item" v-for="item in cart" :key="item.id">
           <div class="d-flex w-100 justify-content-between">
             <h6 class="category">
               <span v-if="item.category === 0" class="badge badge-primary">主食</span>
@@ -74,7 +74,7 @@
             </button>
           </div>
           <div class="modal-body text-center">
-            <h5 style="font-weight: bold">還沒有選擇糧食哦！</h5>
+            <h5>還沒有選擇糧食哦！</h5>
           </div>
           <div class="modal-footer">
             <router-link class="nav-link" :to="{ name: 'Products' }">
@@ -100,7 +100,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <table class="table cart-table" style="width: 100%">
+            <table class="table cart-table">
               <thead>
                 <th width="10%"></th>
                 <th class="s-no" width="15%">種類</th>
@@ -114,7 +114,7 @@
                 <tr v-for="item in cart" :key="item.id">
                   <td class="align-middle">
                     <a class="icon" href="#" @click.prevent="delCart(item.id)">
-                      <i class="fas fa-trash" style="font-size: 20px"></i>
+                      <i class="fas fa-trash"></i>
                     </a>
                   </td>
                   <td v-if="item.category === 0" class="align-middle s-no">
@@ -148,7 +148,7 @@
                 </tr>
               </tbody>
               <tfoot>
-                <tr style="font-weight: bold">
+                <tr>
                   <td colspan="6" class="text-right s-no">總計</td>
                   <td class="text-right">{{ money | currency }}</td>
                 </tr>
@@ -219,6 +219,7 @@ export default {
     $('.mobile-cart').click((e) => {
       e.preventDefault();
       $('body').toggleClass('open');
+      this.getCart();
     });
     $('.close-open').click((e) => {
       e.preventDefault();
@@ -229,5 +230,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 </style>

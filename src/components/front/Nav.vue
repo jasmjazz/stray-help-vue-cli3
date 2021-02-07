@@ -3,19 +3,13 @@
     <div class="wrap">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <router-link :to="{ name: 'Home' }">流浪貓狗助糧平台</router-link>
-          </a>
+          <router-link class="nav-link" :to="{ name: 'Home' }">流浪貓狗助糧平台</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <router-link :to="{ name: 'About' }">關於我們</router-link>
-          </a>
+          <router-link class="nav-link" :to="{ name: 'About' }">關於我們</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <router-link :to="{ name: 'Products' }">愛心糧食</router-link>
-          </a>
+          <router-link class="nav-link" :to="{ name: 'Products' }">愛心糧食</router-link>
         </li>
       </ul>
     </div>
@@ -29,4 +23,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.nav-link {
+  font-size: 16px;
+}
 </style>

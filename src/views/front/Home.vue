@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Nav />
     <div class="container">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -9,7 +8,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../assets/image/carousel01.png" class="d-block w-100" alt="流浪貓狗助糧平台">
+            <img src="../../assets/image/carousel01.png" class="d-block w-100" alt="流浪貓狗助糧平台">
             <div class="text-box">
               <div class="carousel-caption d-md-block carousel-first">
                 <h1>流浪貓狗助糧平台</h1>
@@ -19,7 +18,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../assets/image/carousel02.png" class="d-block w-100" alt="流浪貓狗助糧平台">
+            <img src="../../assets/image/carousel02.png" class="d-block w-100" alt="流浪貓狗助糧平台">
             <div class="text-box">
               <div class="carousel-caption d-md-block carousel-second">
                 <h1>流浪貓狗助糧平台</h1>
@@ -51,12 +50,12 @@
         <div class="row up">
           <div class="col-lg-5 col-md-12">
             <figure class="figure">
-              <img src="../assets/image/picture09.png"
+              <img src="../../assets/image/picture09.png"
               class="figure-img img-fluid rounded" alt="流浪貓">
             </figure>
           </div>
           <div class="col-lg-7 col-md-12 text">
-            <p>全省有許多流浪貓狗園區面臨缺糧的問題。
+            <p>全台有許多流浪貓狗園區面臨缺糧的問題。
               愛爸和愛媽給了流浪貓狗一個家，
               除了讓牠們免於受苦、受餓，
               也大幅減少了社會環境的問題。
@@ -84,7 +83,7 @@
       </div>
       <div class="box" style="text-align: center">
         <figure class="figure">
-          <img src="../assets/image/picture02.png"
+          <img src="../../assets/image/picture02.png"
           class="figure-img img-fluid rounded" alt="助糧流程">
         </figure>
       </div>
@@ -259,13 +258,12 @@
     <div class="container">
       <div class="picture">
         <figure class="figure">
-          <img src="../assets/image/picture01.png"
+          <img src="../../assets/image/picture01.png"
           class="figure-img img-fluid rounded" alt="愛心助糧">
         </figure>
       </div>
     </div>
     <div class="arrow"><i class="fas fa-angle-double-up"></i></div>
-    <Footer />
   </div>
 </template>
 
@@ -273,8 +271,6 @@
 <script>
 // @ is an alias to /src
 import $ from 'jquery';
-import Nav from '@/components/front/Nav.vue';
-import Footer from '@/components/front/Footer.vue';
 
 
 export default {
@@ -285,10 +281,6 @@ export default {
       show: true,
       isOpen: true,
     };
-  },
-  components: {
-    Nav,
-    Footer,
   },
   methods: {
     toggle(num) {

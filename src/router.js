@@ -11,14 +11,14 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('./views/Home.vue'),
-  },
-  {
     path: '',
     component: () => import('./views/Front.vue'),
     children: [
+      {
+        path: '/',
+        name: 'Home',
+        component: () => import('./views/front/Home.vue'),
+      },
       {
         path: 'about',
         name: 'About',
@@ -82,6 +82,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  linkActiveClass: 'is-active',
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
@@ -90,4 +91,5 @@ const router = new VueRouter({
     return { x: 0, y: 0 };
   },
 });
+
 export default router;

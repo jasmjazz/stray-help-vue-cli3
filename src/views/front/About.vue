@@ -10,7 +10,7 @@
       <div class="row text">
         <div class="box">
           <h4>
-            <i class="fas fa-paw" style="margin-right: 5px"></i>
+            <i class="fas fa-paw"></i>
             流浪貓狗助糧平台
           </h4>
           <p>
@@ -80,5 +80,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.fa-paw {
+  margin-right: 5px;
+}
 </style>

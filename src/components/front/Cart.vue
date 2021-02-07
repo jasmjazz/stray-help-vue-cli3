@@ -1,5 +1,5 @@
 <template>
-  <div class="cart-style">
+  <div>
     <div class="desk-cart">
       <div class="icon" @click="checkcart">
         <div v-if="sum > 0" class="num"><span>{{ sum }}</span></div>
@@ -230,4 +230,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.cart-table {
+  width: 100%;
+}
+tfoot {
+  font-weight: bold;
+}
+.fa-trash {
+  font-size: 20px;
+}
 </style>

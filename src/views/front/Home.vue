@@ -254,8 +254,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="container">
       <div class="picture">
         <figure class="figure">
           <img src="../../assets/image/picture01.png"

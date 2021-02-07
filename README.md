@@ -1,14 +1,14 @@
-# stray_help
+# Stray_Help(Vue-Cli3)
 
-## Project setup
-```
-npm install
-```
+### Demo
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
+
+
+### 簡介
+
+以 Vue.js 框架實作網站，功能區分為前、後台
+
 
 ### Compiles and minifies for production
 ```

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="wrap">
+    <div class="wrap about">
       <div class="banner">
         <img src="../../assets/image/carousel01.png" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="row content">
-        <div class="col">
+        <div class="col-md-4 col-sm-12">
           <h5>
             <i class="far fa-calendar-alt"></i><br/>
             <span>服務時段</span>
@@ -34,7 +34,7 @@
             <i class="fas fa-phone" style="font-size: 15px"></i>0809-095-995
           </p>
         </div>
-        <div class="col">
+        <div class="col-md-4 col-sm-12">
           <h5>
             <i class="far fa-list-alt"></i><br/>
             <span>助糧名單</span>
@@ -45,7 +45,7 @@
             感謝你的愛心
           </p>
         </div>
-        <div class="col">
+        <div class="col-md-4 col-sm-12">
           <h5>
             <i class="fas fa-exclamation-triangle"></i><br/>
             <span>注意事項</span>
@@ -79,79 +79,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.text {
-  margin: 100px 0 80px 0;
-  text-align: center;
-  h4 {
-    margin-bottom: 30px;
-    font-weight: 550;
-    color: #616161;
-  }
-  p {
-    font-size: 18px;
-    line-height: 50px;
-    letter-spacing: 1px;
-  }
-  span {
-    color: red;
-  }
-}
-.content {
-  text-align: center;
-  h5 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    color: #616161;
-    font-weight: 550;
-  }
-  i {
-    font-size: 40px;
-    margin: 0 5px 20px 0;
-  }
-  p {
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 2px;
-  }
-}
-.image {
-  margin: 80px 0 80px 0;
-  img {
-    width: 100%;
-    height: 60vh;
-    object-fit: cover; // 填滿容器
-    object-position: 50% 50%;
-  }
-}
-.banner {
-  img {
-  width: 100%;
-  height: 45vh;
-  object-fit: cover;
-  object-position: 50% 75%;
-  border-radius: 5px;
-  opacity: 0.9;
-  }
-  .text-box {
-    position: absolute;
-    margin: 0;
-    top: 30%;
-    left: 46%;
-    transform: translate(-38%, -46%);
-    width: calc(100% - 70%);
-    height: calc(100% - 80%);
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 10px;
-    h1 {
-      font-weight: bold;
-      letter-spacing: 3px;
-      font-size: 60px;
-      color: #ffffff;
-      line-height: 150px;
-      text-align: center;
-    }
-  }
-}
+
 </style>

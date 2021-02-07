@@ -9,7 +9,7 @@
     <!--mobile-->
     <div class="mobile-cart">
       <div class="icon">
-        <div class="num"><span>{{ cart.length }}</span></div>
+        <div v-if="sum > 0" class="num"><span>{{ sum }}</span></div>
         <i class="fas fa-shopping-cart cart"></i>
       </div>
     </div>
@@ -24,15 +24,15 @@
         </div>
         <div v-if="cart.length === 0">
           <div class="d-flex w-100 justify-content-center">
-            <h6>還沒有選購糧食哦</h6>
+            <h6 class="content">還沒有選購糧食哦</h6>
           </div>
         </div>
         <div v-else class="list-group-item" v-for="item in cart" :key="item.id">
           <div class="d-flex w-100 justify-content-between">
             <h6 class="category">
-              <span v-if="item.category === 0" class="badge">主食</span>
-              <span v-else-if="item.category === 1" class="badge">副食</span>
-              <span v-else class="badge">零食</span>
+              <span v-if="item.category === 0" class="badge badge-primary">主食</span>
+              <span v-else-if="item.category === 1" class="badge badge-primary">副食</span>
+              <span v-else class="badge badge-primary">零食</span>
             </h6>
             <small>
               <a class="icon" href="#" @click.prevent="delCart(item.id)">
@@ -119,17 +119,17 @@
                   </td>
                   <td v-if="item.category === 0" class="align-middle s-no">
                     <h5>
-                      <span class="badge">主食</span>
+                      <span class="badge badge-primary">主食</span>
                     </h5>
                   </td>
                   <td v-else-if="item.category === 1" class="align-middle s-no">
                     <h5>
-                      <span class="badge">副食</span>
+                      <span class="badge badge-primary">副食</span>
                     </h5>
                   </td>
                   <td v-else class="align-middle s-no">
                     <h5>
-                      <span class="badge">零食</span>
+                      <span class="badge badge-primary">零食</span>
                     </h5>
                   </td>
                   <td class="align-middle">

@@ -3,6 +3,10 @@
     <Nav />
     <div class="container">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="../assets/image/carousel01.png" class="d-block w-100" alt="流浪貓狗助糧平台">
@@ -59,13 +63,13 @@
               隨著收容的數量急遽上升，
               能力有限的愛爸愛媽需要你我的幫助。
             </p>
-            <p style="padding-top: 25px">
+            <p>
               因為<span style="color: red; font-weight: bold">疫情</span>關係，
               <span style="color: red; font-weight: bold">目前非常缺糧！</span><br/>
               請援助我們度過難關，
               至少讓牠們吃飽，讓牠們有更多時間等待下一個家。
             </p>
-            <p style="padding-top: 25px">
+            <p>
               <span style="color: #616161; font-weight: bold">集食溫飽，捐糧不捐款。</span><br/>
               讓我們集合每一個人的力量，溫飽牠們的每一餐，讓牠們不再流浪。
             </p>
@@ -73,7 +77,7 @@
         </div>
         <div class="row slogan-two">
           <div class="col-12">
-            <h4>「一份糧食，一份希望，一起讓愛不流浪。」</h4>
+            <h4>「一份糧食，一份希望，讓愛不流浪。」</h4>
             <hr/>
           </div>
         </div>

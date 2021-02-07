@@ -12,11 +12,11 @@
       <div class="row">
         <div class="col-11">
           <nav class="nav">
-            <a class="nav-link">
+            <a class="nav-link" href="#">
               <router-link :to="{ name: 'Products' }">糧食列表</router-link>
             </a>
             <span>/</span>
-            <a class="nav-link" style="font-weight: bolder">詳細</a>
+            <a class="nav-link" href="#" style="font-weight: bolder">詳細</a>
           </nav>
         </div>
         <div class="col-1">
@@ -44,7 +44,7 @@
                 <span v-else-if="product.category === 1" class="badge badge-primary">副食</span>
                 <span v-else class="badge badge-primary">零食</span>
               </h5>
-              <h3 style="font-weight: bold">{{ product.title }}</h3>
+              <h3>{{ product.title }}</h3>
               <p>
                 成分｜ {{ product.content }}
               </p>
@@ -227,37 +227,12 @@ export default {
 <style scoped lang="scss">
 .nav {
   margin: 80px 0 35px 0;
+  font-size: 16px;
   span {
     padding-top: 7px;
   }
 }
-.banner {
-  img {
-  width: 100%;
-  height: 45vh;
-  object-fit: cover;
-  object-position: 50% 75%;
-  border-radius: 5px;
-  }
-  .text-box {
-    position: absolute;
-    margin: 0;
-    top: 30%;
-    left: 46%;
-    transform: translate(-38%, -46%);
-    width: calc(100% - 70%);
-    height: calc(100% - 80%);
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    border-radius: 10px;
-    h1 {
-      font-weight: bold;
-      letter-spacing: 3px;
-      font-size: 60px;
-      color: #ffffff;
-      line-height: 150px;
-      text-align: center;
-    }
-  }
+h3 {
+  font-weight: bold;
 }
 </style>

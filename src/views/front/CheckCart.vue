@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="check-cart">
     <div class="wrap">
       <loading :active.sync="isLoading" loader="dots"></loading>
       <Alert />
@@ -28,14 +28,13 @@
       </div>
       <!--content-->
       <div class="card border-1">
-        <div class="card-body checkcart">
-          <h4 v-if="cart.length === 0" class="text-center"
-            style="padding: 50px">還沒有選擇糧食哦！</h4>
+        <div class="card-body list">
+          <h4 v-if="cart.length === 0">還沒有選擇糧食哦！</h4>
           <ul v-else>
             <li v-for="item in cart" :key="item.id">
               <div class="row">
                 <div class="col-2 p-0">
-                  <a class="icon" @click.prevent="delCart(item.id)">
+                  <a class="icon" href="#" @click.prevent="delCart(item.id)">
                     <i class="fas fa-trash trash" style="font-size: 18px"></i>
                   </a>
                 </div>
@@ -46,15 +45,13 @@
                     </div>
                     <div class="col-12 col-md-6">
                       <i class="far fa-minus-square"
-                        style="font-size: 20px; vertical-align: text-bottom"
-                        @click="editNum(item, -1)">
+                      @click="editNum(item, -1)">
                       </i>
-                      <span style="font-size: 18px; margin-left: 15px; margin-right: 15px">
+                      <span>
                         {{ item.qty }}
                       </span>
                       <i class="far fa-plus-square"
-                        style="font-size: 20px; vertical-align: text-bottom"
-                        @click="editNum(item, +1)">
+                      @click="editNum(item, +1)">
                       </i>
                     </div>
                   </div>
@@ -67,7 +64,7 @@
               </div>
               <hr/>
             </li>
-            <p v-if="cart.length > 0" class="text-right" style="font-weight: bold; font-size: 18px">
+            <p v-if="cart.length > 0" class="total">
               總計 NT {{ money | currency }}
             </p>
           </ul>
@@ -200,67 +197,30 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-ul {
-  list-style-type: none;
+.fa-minus-square {
+  font-size: 20px;
+  vertical-align: text-bottom;
 }
-.pay {
-  margin-bottom: 40px;
+.fa-plus-square {
+  font-size: 20px;
+  vertical-align: text-bottom;
 }
-.modal-header {
-  background-color: #bdbdbd;
-  h5 {
-    font-weight: bold;
+.list {
+  h4 {
+    line-height: 150px;
+    text-align: center;
   }
-}
-.modal-body {
-  p {
-    margin-top: 15px;
-    font-size: 18px;
-  }
-}
-.message {
-  margin: 0 0 60px 5px;
-  letter-spacing: 1px;
-  h6 {
-    font-size: 20px;
-  }
-  i {
-    margin-right: 5px;
-  }
-  p {
+  p{
     font-size: 16px;
-    line-height: 30px;
-    color: #333;
+  }
+  span {
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
-.banner {
-  img {
-  width: 100%;
-  height: 45vh;
-  object-fit: cover;
-  object-position: 50% 60%;
-  border-radius: 5px;
-  opacity: 0.9;
-  }
-  .text-box {
-    position: absolute;
-    margin: 0;
-    top: 30%;
-    left: 46%;
-    transform: translate(-38%, -46%);
-    width: calc(100% - 70%);
-    height: calc(100% - 80%);
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 10px;
-    h1 {
-      font-weight: bold;
-      letter-spacing: 3px;
-      font-size: 60px;
-      color: #ffffff;
-      line-height: 150px;
-      text-align: center;
-    }
-  }
+.total {
+  text-align: right;
+  font-weight: bold;
 }
 </style>

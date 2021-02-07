@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="wrap">
+    <div class="wrap order-check">
       <loading :active.sync="isLoading" loader="dots"></loading>
       <div class="banner">
         <img src="../../assets/image/picture04.png" class="img-fluid" alt="流浪貓狗助糧平台">
@@ -187,61 +187,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.data {
-  margin-bottom: 80px;
-  h5 {
-    color: #ffffff;
-    margin-top: 8px;
-    letter-spacing: 1px;
-    font-weight: bold;
-  }
-}
-.modal-header {
-  background-color: #bdbdbd;
-  h5 {
-    font-weight: bold;
-  }
-}
-#leaveModal {
-  .modal-body {
-    p {
-      margin-top: 15px;
-      font-size: 18px;
-    }
-  }
-}
-.btn {
-  outline: none;
-  box-shadow: none;
-}
-.banner {
-  img {
-  width: 100%;
-  height: 45vh;
-  object-fit: cover;
-  object-position: 50% 60%;
-  border-radius: 5px;
-  opacity: 0.9;
-  }
-  .text-box {
-    position: absolute;
-    margin: 0;
-    top: 30%;
-    left: 46%;
-    transform: translate(-38%, -46%);
-    width: calc(100% - 70%);
-    height: calc(100% - 80%);
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 10px;
-    h1 {
-      font-weight: bold;
-      letter-spacing: 3px;
-      font-size: 60px;
-      color: #ffffff;
-      line-height: 150px;
-      text-align: center;
-    }
-  }
-}
+
 </style>

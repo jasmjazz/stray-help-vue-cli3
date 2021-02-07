@@ -1,0 +1,104 @@
+.about {
+  .text {
+    margin: 100px 0 80px 0;
+    text-align: center;
+    @include x-small {
+      margin-bottom: 40px;
+    }
+    @include x-small {
+      padding: 0 15px 0 15px;
+    }
+    h4 {
+      margin-bottom: 30px;
+      font-weight: 550;
+      color: #616161;
+    }
+    p {
+      font-size: 18px;
+      line-height: 50px;
+      letter-spacing: 1px;
+      @include x-small {
+        font-size: 14px;
+        line-height: 40px;
+      }
+    }
+    span {
+      color: red;
+    }
+  }
+  .content {
+    text-align: center;
+    h5 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      color: #616161;
+      font-weight: 550;
+    }
+    i {
+      font-size: 40px;
+      margin: 0 5px 20px 0;
+      @include x-small {
+        margin-top: 20px;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 2px;
+      @include x-small {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .image {
+    margin: 80px 0 80px 0;
+    @include x-small {
+      margin-top: 50px;
+    }
+    img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover; // 填滿容器
+      object-position: 50% 50%;
+    }
+  }
+  .banner {
+    img {
+      width: 100%;
+      height: 45vh;
+      object-fit: cover;
+      object-position: 50% 75%;
+      border-radius: 5px;
+      opacity: 0.9;
+    }
+    .text-box {
+      position: absolute;
+      margin: 0;
+      top: 30%;
+      left: 46%;
+      transform: translate(-38%, -46%);
+      width: calc(100% - 70%);
+      height: calc(100% - 80%);
+      background-color: rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      border-radius: 10px;
+      @include x-small {
+        width: calc(100% - 50%);
+        height: calc(100% - 80%);
+      }
+      h1 {
+        font-weight: bold;
+        letter-spacing: 3px;
+        font-size: 60px;
+        color: #ffffff;
+        line-height: 150px;
+        text-align: center;
+        @include x-small {
+          font-size: 40px;
+          line-height: 130px;
+        }
+      }
+    }
+  }
+}

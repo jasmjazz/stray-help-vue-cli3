@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="wrap">
+    <div class="wrap products">
       <loading :active.sync="isLoading" loader="dots"></loading>
       <div class="banner">
         <img src="../../assets/image/img15.png" class="img-fluid gray" alt="流浪貓狗助糧平台">
@@ -119,14 +119,6 @@ export default {
 .nav {
   margin: 80px 0 35px 0;
 }
-.cart {
-  font-size: 30px;
-  vertical-align: middle;
-  p {
-    text-align: right;
-    letter-spacing: 1px;
-  }
-}
 .products-card {
   margin-bottom: 100px;
   .card {
@@ -149,35 +141,6 @@ export default {
   .card:hover {
     cursor: pointer;
     box-shadow: 6px 6px 6px #757575;
-  }
-}
-.banner {
-  img {
-  width: 100%;
-  height: 45vh;
-  object-fit: cover;
-  object-position: 50% 75%;
-  border-radius: 5px;
-  }
-  .text-box {
-    position: absolute;
-    margin: 0;
-    top: 30%;
-    left: 46%;
-    transform: translate(-38%, -46%);
-    width: calc(100% - 70%);
-    height: calc(100% - 80%);
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    border-radius: 10px;
-    h1 {
-      font-weight: bold;
-      letter-spacing: 3px;
-      font-size: 60px;
-      color: #ffffff;
-      line-height: 150px;
-      text-align: center;
-    }
   }
 }
 </style>

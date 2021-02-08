@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="content">
-        <div class="row up">
+        <div class="row">
           <div class="col-lg-5 col-md-12">
             <figure class="figure">
               <img src="../../assets/image/picture09.png"
@@ -63,13 +63,13 @@
               能力有限的愛爸愛媽需要你我的幫助。
             </p>
             <p>
-              因為<span style="color: red; font-weight: bold">疫情</span>關係，
-              <span style="color: red; font-weight: bold">目前非常缺糧！</span><br/>
+              因為<span class="reason">疫情</span>關係，
+              <span class="reason">目前非常缺糧！</span><br/>
               請援助我們度過難關，
               至少讓牠們吃飽，讓牠們有更多時間等待下一個家。
             </p>
             <p>
-              <span style="color: #616161; font-weight: bold">集食溫飽，捐糧不捐款。</span><br/>
+              <span style="color: #616161">集食溫飽，捐糧不捐款。</span><br/>
               讓我們集合每一個人的力量，溫飽牠們的每一餐，讓牠們不再流浪。
             </p>
           </div>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </div>
-      <div class="box" style="text-align: center">
+      <div class="box text-center">
         <figure class="figure">
           <img src="../../assets/image/picture02.png"
           class="figure-img img-fluid rounded" alt="助糧流程">
@@ -98,14 +98,11 @@
                 <p class="mb-0">
                   捐助的糧食多久會送達園區呢？
                   <span v-if="type === 1">
-                    <i v-if="isOpen" class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
-                    <i v-else class="fas fa-sort-up"
-                    style="padding-top: 8px"></i>
+                    <i v-if="isOpen" class="fas fa-sort-down"></i>
+                    <i v-else class="fas fa-sort-up"></i>
                   </span>
                   <span v-else>
-                    <i class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
+                    <i class="fas fa-sort-down"></i>
                   </span>
                 </p>
               </div>
@@ -124,14 +121,11 @@
                 <p class="mb-0">
                   愛心糧食會捐助到哪裡呢？
                   <span v-if="type === 2">
-                    <i v-if="isOpen" class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
-                    <i v-else class="fas fa-sort-up"
-                    style="padding-top: 8px"></i>
+                    <i v-if="isOpen" class="fas fa-sort-down"></i>
+                    <i v-else class="fas fa-sort-up"></i>
                   </span>
                   <span v-else>
-                    <i class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
+                    <i class="fas fa-sort-down"></i>
                   </span>
                 </p>
               </div>
@@ -150,14 +144,11 @@
                 <p class="mb-0">
                   如何證明園區有收到物資呢？
                   <span v-if="type === 3">
-                    <i v-if="isOpen" class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
-                    <i v-else class="fas fa-sort-up"
-                    style="padding-top: 8px"></i>
+                    <i v-if="isOpen" class="fas fa-sort-down"></i>
+                    <i v-else class="fas fa-sort-up"></i>
                   </span>
                   <span v-else>
-                    <i class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
+                    <i class="fas fa-sort-down"></i>
                   </span>
                 </p>
               </div>
@@ -175,14 +166,11 @@
                 <p class="mb-0">
                   能夠自行準備物資捐助流浪園區嗎？
                   <span v-if="type === 4">
-                    <i v-if="isOpen" class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
-                    <i v-else class="fas fa-sort-up"
-                    style="padding-top: 8px"></i>
+                    <i v-if="isOpen" class="fas fa-sort-down"></i>
+                    <i v-else class="fas fa-sort-up"></i>
                   </span>
                   <span v-else>
-                    <i class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
+                    <i class="fas fa-sort-down"></i>
                   </span>
                 </p>
               </div>
@@ -201,21 +189,18 @@
                 <p class="mb-0">
                   請問可以認養貓狗嗎？
                   <span v-if="type === 5">
-                    <i v-if="isOpen" class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
-                    <i v-else class="fas fa-sort-up"
-                    style="padding-top: 8px"></i>
+                    <i v-if="isOpen" class="fas fa-sort-down"></i>
+                    <i v-else class="fas fa-sort-up"></i>
                   </span>
                   <span v-else>
-                    <i class="fas fa-sort-down"
-                    style="vertical-align: text-top"></i>
+                    <i class="fas fa-sort-down"></i>
                   </span>
                 </p>
               </div>
               <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
               data-parent="#accordionExample">
                 <div class="card-body">
-                  請至<span style="color: red; font-weight: bold">「全國動物收容系統」</span>認養，
+                  請至<span class="reason">「全國動物收容系統」</span>認養，
                   上面有各園區的最新資訊。<br/>
                   「以認養代替購買，愛牠就不要拋棄牠！」
                 </div>
@@ -234,19 +219,17 @@
           <div class="card">
             <div class="card-body">
               <h5>
-                <span style="color: #fbc02d">
+                <span class="first-text">
                   <i class="fas fa-exclamation-triangle"></i>
                   165防詐騙宣導<br/>
                   提醒您提高警覺，疑似詐騙請撥打165求證</span><br/>
-                <span style="color: #ffffff">
+                <span class="second-text">
                   ※若需簽收單，請加入 LINE@ 或來電洽詢<br/>
                   ※若需報稅者，請與我們聯繫
                 </span><br/>
                 <router-link :to="{ name: 'Products' }">
                   <button type="button" class="btn" >
-                    <span style="letter-spacing: 1px">
-                      <i class="fas fa-chevron-right"></i> 立即愛心助糧
-                    </span>
+                    <i class="fas fa-chevron-right"></i> 立即愛心助糧
                   </button>
                 </router-link>
               </h5>
@@ -300,5 +283,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.fa-sort-down {
+  vertical-align: text-top;
+}
+.fa-sort-up {
+  padding-top: 8px;
+}
 </style>

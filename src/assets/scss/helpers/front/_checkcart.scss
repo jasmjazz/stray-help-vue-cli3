@@ -1,96 +1,104 @@
-.check-cart {
-  ul {
-    list-style-type: none;
-  }
-  .pay {
-    margin-bottom: 40px;
-  }
-  .modal-header {
-    background-color: #bdbdbd;
-    h5 {
-      font-weight: bold;
-    }
-  }
-  .modal-body {
-    p {
-      margin-top: 15px;
-      font-size: 18px;
-    }
-  }
-  .cart {
-    h4 {
-      padding: 50px;
-    }
-  }
-  .message {
-    margin: 50px 0 60px 5px;
-    letter-spacing: 1px;
-    h6 {
-      font-size: 20px;
-      opacity: 0.7;
-    }
-    i {
-      margin-right: 5px;
-    }
-    p {
-      font-size: 15px;
-      line-height: 30px;
-      color: #333;
-    }
-  }
-  .banner {
-    img {
-      width: 100%;
-      height: 45vh;
-      object-fit: cover;
-      object-position: 50% 75%;
-      border-radius: 5px;
-      opacity: 0.9;
-    }
-    .text-box {
-      position: absolute;
-      margin: 0;
-      top: 30%;
-      left: 46%;
-      transform: translate(-38%, -46%);
-      width: calc(100% - 70%);
-      height: calc(100% - 80%);
-      background-color: rgba(0, 0, 0, 0.1);
-      z-index: 1;
-      border-radius: 10px;
-      @include large {
-        width: calc(100% - 50%);
-        height: calc(100% - 80%);
-      }
-      @include x-small {
-        width: calc(100% - 40%);
-        height: calc(100% - 85%);
-      }
-      h1 {
-        font-weight: bold;
-        letter-spacing: 3px;
-        font-size: 60px;
-        color: #ffffff;
-        line-height: 150px;
-        text-align: center;
-        @include large {
-          font-size: 60px;
-          line-height: 280px;
-        }
-        @include medium {
-          font-size: 60px;
-          line-height: 200px;
-        }
-        @include x-small {
-          font-size: 36px;
-          line-height: 120px;
-        }
-      }
-    }
-  }
-  .total {
-    text-align: right;
+.pay {
+  margin-bottom: 40px;
+}
+.modal-header {
+  background-color: #bdbdbd;
+  h5 {
     font-weight: bold;
+  }
+}
+.modal-body {
+  p {
+    margin-top: 15px;
     font-size: 18px;
   }
+}
+.cart {
+  h4 {
+    padding: 50px;
+  }
+}
+.message {
+  margin: 50px 0 60px 5px;
+  letter-spacing: 1px;
+  h6 {
+    font-size: 20px;
+    opacity: 0.7;
+  }
+  i {
+    margin-right: 5px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 30px;
+    color: #333;
+  }
+}
+.banner {
+  img {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+    object-position: 50% 75%;
+    border-radius: 5px;
+    opacity: 0.9;
+  }
+  .text-box {
+    position: absolute;
+    margin: 0;
+    top: 30%;
+    left: 46%;
+    transform: translate(-38%, -46%);
+    width: calc(100% - 70%);
+    height: calc(100% - 80%);
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 10px;
+    @include large {
+      width: calc(100% - 50%);
+      height: calc(100% - 80%);
+    }
+    @include x-small {
+      width: calc(100% - 40%);
+      height: calc(100% - 85%);
+    }
+    h1 {
+      font-weight: bold;
+      letter-spacing: 3px;
+      font-size: 60px;
+      color: #ffffff;
+      line-height: 150px;
+      text-align: center;
+      @include large {
+        font-size: 60px;
+        line-height: 280px;
+      }
+      @include medium {
+        font-size: 60px;
+        line-height: 200px;
+      }
+      @include x-small {
+        font-size: 36px;
+        line-height: 120px;
+      }
+    }
+  }
+}
+.total {
+  text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.fa-minus-square {
+  font-size: 20px;
+  vertical-align: text-bottom;
+}
+.fa-plus-square {
+  font-size: 20px;
+  vertical-align: text-bottom;
+}
+.btn-back {
+  margin-right: 15px;
+  opacity: 0.6;
 }

@@ -154,7 +154,7 @@ body {
   }
 }
 
-.content .up {
+.content {
   img {
     opacity: 0.9;
   }
@@ -178,6 +178,12 @@ body {
     @include x-small {
       padding: 5px 20px 0 20px;
     }
+  }
+  span {
+    font-weight: bold;
+  }
+  .reason {
+    color: red;
   }
 }
 
@@ -241,10 +247,17 @@ body {
       font-size: 12px;
     }
   }
+  .first-text {
+    color: #fbc02d;
+  }
+  .second-text {
+    color: #ffffff;
+  }
   .btn {
     margin-top: 15px;
     background-color: #0d6fb8;
     color: #ffffff;
+    letter-spacing: 2px;
   }
 }
 

@@ -117,8 +117,7 @@
             <button type="button" class="btn btn-primary btn-stay" data-dismiss="modal">
               否
             </button>
-            <button type="button" class="btn btn-primary btn-leave" data-dismiss="modal"
-            style="opacity: 0.5">
+            <button type="button" class="btn btn-primary btn-leave" data-dismiss="modal">
               是
             </button>
           </div>
@@ -209,5 +208,8 @@ export default {
 <style scoped lang="scss">
 .modal-header {
   background-color: #616161;
+}
+.btn-leave {
+  opacity: 0.5;
 }
 </style>

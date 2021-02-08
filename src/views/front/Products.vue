@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="wrap products">
+    <div class="wrap">
       <loading :active.sync="isLoading" loader="dots"></loading>
       <div class="banner">
         <img src="../../assets/image/img15.png" class="img-fluid gray" alt="流浪貓狗助糧平台">

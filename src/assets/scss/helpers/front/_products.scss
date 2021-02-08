@@ -1,62 +1,60 @@
-.products {
-  .title {
-    font-weight: bold;
+.title {
+  font-weight: bold;
+}
+.cart {
+  font-size: 30px;
+  vertical-align: middle;
+  p {
+    text-align: right;
+    letter-spacing: 1px;
   }
-  .cart {
-    font-size: 30px;
-    vertical-align: middle;
-    p {
-      text-align: right;
-      letter-spacing: 1px;
-    }
+}
+.banner {
+  img {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+    object-position: 50% 75%;
+    border-radius: 5px;
+    opacity: 0.9;
   }
-  .banner {
-    img {
-      width: 100%;
-      height: 45vh;
-      object-fit: cover;
-      object-position: 50% 75%;
-      border-radius: 5px;
-      opacity: 0.9;
-    }
-    .text-box {
-      position: absolute;
-      margin: 0;
-      top: 30%;
-      left: 46%;
-      transform: translate(-38%, -46%);
-      width: calc(100% - 70%);
+  .text-box {
+    position: absolute;
+    margin: 0;
+    top: 30%;
+    left: 46%;
+    transform: translate(-38%, -46%);
+    width: calc(100% - 70%);
+    height: calc(100% - 80%);
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    border-radius: 10px;
+    @include large {
+      width: calc(100% - 50%);
       height: calc(100% - 80%);
-      background-color: rgba(0, 0, 0, 0.25);
-      z-index: 1;
-      border-radius: 10px;
+    }
+    @include x-small {
+      width: calc(100% - 40%);
+      height: calc(100% - 85%);
+    }
+    h1 {
+      font-weight: bold;
+      letter-spacing: 3px;
+      font-size: 60px;
+      color: #ffffff;
+      line-height: 150px;
+      text-align: center;
       @include large {
-        width: calc(100% - 50%);
-        height: calc(100% - 80%);
+        font-size: 60px;
+        line-height: 280px;
+      }
+      @include medium {
+        font-size: 60px;
+        line-height: 200px;
       }
       @include x-small {
-        width: calc(100% - 40%);
-        height: calc(100% - 85%);
-      }
-      h1 {
-        font-weight: bold;
-        letter-spacing: 3px;
-        font-size: 60px;
-        color: #ffffff;
-        line-height: 150px;
-        text-align: center;
-        @include large {
-          font-size: 60px;
-          line-height: 280px;
-        }
-        @include medium {
-          font-size: 60px;
-          line-height: 200px;
-        }
-        @include x-small {
-          font-size: 36px;
-          line-height: 120px;
-        }
+        font-size: 36px;
+        line-height: 120px;
       }
     }
   }

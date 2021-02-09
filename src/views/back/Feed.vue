@@ -72,7 +72,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="row">
+            <form class="row" @submit.prevent="updateProduct">
               <div class="col-sm-4">
                 <div class="form-group">
                   <label for="image">輸入圖片網址</label>
@@ -88,9 +88,7 @@
                   <input type="file" id="customFile" class="form-control"
                     ref="files" @change="uploadFile">
                 </div>
-                <img img="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=828346ed697837ce808cae68d3ddc3cf&auto=format&fit=crop&w=1350&q=80"
-                  :src="tempProduct.imageUrl"
-                  class="img-fluid">
+                <img :src="tempProduct.imageUrl" class="img-fluid">
               </div>
 
               <div class="col-sm-8">
@@ -164,8 +162,7 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" style="opacity: 0.6"
               data-dismiss="modal">取消</button>
-            <button type="submit" class="btn btn-primary"
-              @click.prevent="updateProduct">確認</button>
+            <button type="submit" class="btn btn-primary">確認</button>
           </div>
         </div>
       </div>
@@ -199,7 +196,7 @@
 </template>
 
 <script>
-import $ from 'jquery';
+/* global $ */
 import Pagination from '@/components/Pagination.vue';
 
 export default {

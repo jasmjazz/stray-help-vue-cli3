@@ -60,9 +60,9 @@
       </div>
       <div class="row image">
         <figure class="figure">
-            <img src="../../assets/image/img03.gif"
-            class="figure-img img-fluid rounded" alt="一起幫助浪浪">
-          </figure>
+          <img src="../../assets/image/img03.gif"
+          class="figure-img img-fluid rounded" alt="一起幫助浪浪">
+        </figure>
       </div>
     </div>
   </div>

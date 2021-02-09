@@ -250,8 +250,7 @@
 
 
 <script>
-// @ is an alias to /src
-import $ from 'jquery';
+/* global $ */
 
 
 export default {

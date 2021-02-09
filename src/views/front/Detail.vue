@@ -3,8 +3,8 @@
     <div class="wrap">
       <loading :active.sync="isLoading" loader="dots"></loading>
       <Alert />
-      <div class="banner">
-        <img src="../../assets/image/img15.png" class="img-fluid gray" alt="流浪貓狗助糧平台">
+      <div class="products-banner">
+        <img src="../../assets/image/img05.png" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
           <h1>愛心糧食</h1>
         </div>
@@ -23,14 +23,13 @@
           <ul class="nav justify-content-end">
             <li class="nav-item">
               <a class="nav-link">
-                <!-- <i class="fas fa-shopping-cart cart"></i> -->
                 <Cart :sum = 'sum' @update="updateSum"/>
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="row product-card">
+      <div class="row detail-card">
         <div class="col-md-6 col-sm-12">
           <div class="picture">
             <img :src="product.imageUrl" class="figure-img img-fluid rounded" alt="糧食">

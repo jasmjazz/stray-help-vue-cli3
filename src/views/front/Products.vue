@@ -2,8 +2,8 @@
   <div>
     <div class="wrap">
       <loading :active.sync="isLoading" loader="dots"></loading>
-      <div class="banner">
-        <img src="../../assets/image/img15.png" class="img-fluid gray" alt="流浪貓狗助糧平台">
+      <div class="products-banner">
+        <img src="../../assets/image/img05.png" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
           <h1>愛心糧食</h1>
         </div>
@@ -36,14 +36,13 @@
         </div>
       </div>
       <div class="products-card">
-        <div class="col-11">
+        <div class="col-12">
           <div class="row">
             <div class="card-group col-md-4"
             v-for="item in products" :key="item.id">
               <div class="card border-0"
               @click="$router.push(`/detail/${item.id}`)">
-                <div class="tab"><span>急需</span></div>
-                <div style="height: 240px; background-size: cover"
+                <div style="height: 260px; background-size: cover"
                 :style="{backgroundImage: `url(${item.imageUrl})`}">
                 </div>
                 <div class="card-body">

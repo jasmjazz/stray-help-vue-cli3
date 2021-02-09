@@ -1,15 +1,25 @@
 <template>
   <div>
-    <div class="desk-cart">
+    <div v-if="sum === 0" class="desk-cart-empty">
       <div class="icon" @click="checkcart">
-        <div v-if="sum > 0" class="num"><span>{{ sum }}</span></div>
+        <i class="fas fa-shopping-cart cart"></i>
+      </div>
+    </div>
+    <div v-else class="desk-cart">
+      <div class="icon" @click="checkcart">
+        <div class="num"><span>{{ sum }}</span></div>
         <i class="fas fa-shopping-cart cart"></i>
       </div>
     </div>
     <!--mobile-->
-    <div class="mobile-cart">
+    <div v-if="sum === 0" class="mobile-cart-empty">
       <div class="icon">
-        <div v-if="sum > 0" class="num"><span>{{ sum }}</span></div>
+        <i class="fas fa-shopping-cart cart"></i>
+      </div>
+    </div>
+    <div v-else class="mobile-cart">
+      <div class="icon">
+        <div class="num"><span>{{ sum }}</span></div>
         <i class="fas fa-shopping-cart cart"></i>
       </div>
     </div>

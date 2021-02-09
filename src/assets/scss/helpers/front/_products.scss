@@ -1,22 +1,10 @@
-.title {
-  font-weight: bold;
-}
-.cart {
-  font-size: 30px;
-  vertical-align: middle;
-  p {
-    text-align: right;
-    letter-spacing: 1px;
-  }
-}
-.banner {
+.products-banner {
   img {
     width: 100%;
     height: 45vh;
     object-fit: cover;
-    object-position: 50% 75%;
+    object-position: 50% 90%;
     border-radius: 5px;
-    opacity: 0.9;
   }
   .text-box {
     position: absolute;
@@ -57,5 +45,17 @@
         line-height: 120px;
       }
     }
+  }
+}
+
+.title {
+  font-weight: bold;
+}
+.cart {
+  font-size: 30px;
+  vertical-align: middle;
+  p {
+    text-align: right;
+    letter-spacing: 1px;
   }
 }

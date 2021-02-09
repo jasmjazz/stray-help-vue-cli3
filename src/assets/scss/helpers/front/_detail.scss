@@ -2,17 +2,11 @@
   margin: 80px 0 0 10px;
   font-weight: bolder;
 }
-.btn {
-  margin-top: 30px;
-  color: #ffffff;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
 .title {
   font-weight: bold;
 }
 
-.product-card {
+.detail-card {
   margin-bottom: 50px;
   @include large {
     margin-bottom: 5px;
@@ -34,17 +28,17 @@
       }
     }
   }
-  h3 {
-    margin: 20px 0 30px 0;
-  }
-  p {
-    font-size: 18px;
-  }
   .card {
     margin: 0 15px 0 0;
     @include x-small {
       margin: -120px 15px 0 15px;
     }
+  }
+  h3 {
+    margin: 20px 0 30px 0;
+  }
+  p {
+    font-size: 18px;
   }
   .price {
     margin: 20px 2px 30px 0;
@@ -53,10 +47,17 @@
     }
   }
   .text {
+    font-size: 16px;
     margin-top: 10px;
     @include x-small {
       margin-left: 15px;
     }
+  }
+  .btn {
+    margin-top: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2px;
   }
 }
 
@@ -85,6 +86,7 @@
     }
   }
   p {
+    font-size: 16px;
     line-height: 36px;
   }
 }
@@ -115,56 +117,5 @@
   p {
     text-align: right;
     letter-spacing: 1px;
-  }
-}
-
-.banner {
-  img {
-    width: 100%;
-    height: 45vh;
-    object-fit: cover;
-    object-position: 50% 75%;
-    border-radius: 5px;
-    opacity: 0.9;
-  }
-  .text-box {
-    position: absolute;
-    margin: 0;
-    top: 30%;
-    left: 46%;
-    transform: translate(-38%, -46%);
-    width: calc(100% - 70%);
-    height: calc(100% - 80%);
-    background-color: rgba(0, 0, 0, 0.25);
-    z-index: 1;
-    border-radius: 10px;
-    @include large {
-      width: calc(100% - 50%);
-      height: calc(100% - 80%);
-    }
-    @include x-small {
-      width: calc(100% - 40%);
-      height: calc(100% - 85%);
-    }
-    h1 {
-      font-weight: bold;
-      letter-spacing: 3px;
-      font-size: 60px;
-      color: #ffffff;
-      line-height: 150px;
-      text-align: center;
-      @include large {
-        font-size: 60px;
-        line-height: 280px;
-      }
-      @include medium {
-        font-size: 60px;
-        line-height: 200px;
-      }
-      @include x-small {
-        font-size: 36px;
-        line-height: 120px;
-      }
-    }
   }
 }

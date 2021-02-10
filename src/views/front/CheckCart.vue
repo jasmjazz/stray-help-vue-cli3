@@ -174,6 +174,7 @@ export default {
   },
 };
 </script>
+
 <style scoped lang="scss">
 li {
   list-style-type: none;

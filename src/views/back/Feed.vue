@@ -91,7 +91,7 @@
                 <img :src="tempProduct.imageUrl" class="img-fluid">
               </div>
 
-              <div class="col-sm-8">
+              <div class="col-sm-8 mb-5">
                 <div class="form-group">
                   <label for="title">品名</label>
                   <input type="text" class="form-control" id="title"
@@ -128,7 +128,6 @@
                   </div>
                 </div>
                 <hr>
-
                 <div class="form-group">
                   <label for="description">描述</label>
                   <textarea type="text" class="form-control" id="description"
@@ -157,12 +156,13 @@
                   </div>
                 </div>
               </div>
+              <div class="form-button">
+                <button type="button" class="btn btn-primary"
+                style="opacity: 0.5; margin-right: 10px"
+                  data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary">確認</button>
+              </div>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" style="opacity: 0.6"
-              data-dismiss="modal">取消</button>
-            <button type="submit" class="btn btn-primary">確認</button>
           </div>
         </div>
       </div>
@@ -184,7 +184,7 @@
             是否刪除 <strong class="text-danger">{{ tempProduct.title }}</strong> 商品？
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
             <button type="button" class="btn btn-danger"
               @click="deleteProduct"
             >確認刪除</button>
@@ -325,5 +325,10 @@ export default {
 .form-control:focus {
   border-color: #aeaeae;
   box-shadow: 0 0 0 0.2rem rgba(238, 216, 216, 0.25);
+}
+.form-button {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
 }
 </style>

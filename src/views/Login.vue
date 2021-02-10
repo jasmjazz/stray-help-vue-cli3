@@ -53,7 +53,6 @@ export default {
 </script>
 
 <style scoped>
-
 .box {
   width: 100%;
   margin-top: 150px;

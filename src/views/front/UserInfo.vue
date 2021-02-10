@@ -1,9 +1,9 @@
 <template>
-  <div class="user-info">
+  <div>
     <div class="wrap">
       <loading :active.sync="isLoading" loader="dots"></loading>
-      <div class="banner">
-        <img src="../../assets/image/picture04.png" class="img-fluid" alt="流浪貓狗助糧平台">
+      <div class="order-banner">
+        <img src="../../assets/image/picture05.png" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
           <h1>助糧流程</h1>
         </div>
@@ -135,7 +135,7 @@ export default {
   data() {
     return {
       isLoading: false,
-      carts: [],
+      cart: [],
       form: {
         user: {
           name: '',
@@ -149,6 +149,10 @@ export default {
     };
   },
   methods: {
+    getCart() {
+      const vm = this;
+      vm.cart = JSON.parse(localStorage.getItem('cart')) || [];
+    },
     createOrder() {
       const vm = this;
       vm.addCart();
@@ -157,9 +161,8 @@ export default {
       vm.isLoading = true;
       vm.$http.post(api, { data: order }).then((response) => {
         if (response.data.success) {
-          vm.isLoading = false;
           vm.nextPage = true;
-          vm.carts = response.data.data;
+          vm.isLoading = false;
           vm.$router.push(`/ordercheck/${response.data.orderId}`);
           localStorage.removeItem('cart');
         } else {
@@ -171,7 +174,6 @@ export default {
     addCart() {
       const vm = this;
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/cart`;
-      vm.isLoading = true;
       vm.cart = JSON.parse(localStorage.getItem('cart')) || [];
       vm.cart.forEach((item) => {
         const product = {
@@ -179,9 +181,8 @@ export default {
           qty: item.qty,
         };
         vm.$http.post(api, { data: product }).then((response) => {
-          if (response.data.success) {
-            vm.isLoading = false;
-            vm.$router.push('/userinfo');
+          if (!response.data.success) {
+            vm.$bus.$emit('message: push', response.data.message, 'danger');
           }
         });
       });
@@ -189,6 +190,9 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
     const vm = this;
+    if (vm.cart.length === 0) {
+      vm.nextPage = true;
+    }
     if (vm.nextPage) {
       next();
     } else {
@@ -198,9 +202,11 @@ export default {
       });
       $('.btn-leave').on('click', () => {
         next();
-        // vm.removeCart();
       });
     }
+  },
+  created() {
+    this.getCart();
   },
 };
 </script>

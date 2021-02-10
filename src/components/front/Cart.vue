@@ -12,12 +12,12 @@
       </div>
     </div>
     <!--mobile-->
-    <div v-if="sum === 0" class="mobile-cart-empty">
+    <div v-if="sum === 0" class="mobile mobile-cart-empty">
       <div class="icon">
         <i class="fas fa-shopping-cart cart"></i>
       </div>
     </div>
-    <div v-else class="mobile-cart">
+    <div v-else class="mobile mobile-cart">
       <div class="icon">
         <div class="num"><span>{{ sum }}</span></div>
         <i class="fas fa-shopping-cart cart"></i>
@@ -55,7 +55,7 @@
             {{ item.qty }} x NT{{ item.price | currency }}
           </h6>
         </div>
-        <div class="d-flex w-100 justify-content-center">
+        <div class="d-flex w-100 justify-content-center mt-4">
           <router-link v-if="cart.length === 0" :to="{ name: 'Products' }"
             class="nav-link close-open">
             <button type="button" class="btn btn-primary">
@@ -226,7 +226,7 @@ export default {
     this.getCart();
   },
   mounted() {
-    $('.mobile-cart').click((e) => {
+    $('.mobile').click((e) => {
       e.preventDefault();
       $('body').toggleClass('open');
       this.getCart();
@@ -243,8 +243,12 @@ export default {
 .cart-table {
   width: 100%;
 }
-tfoot {
-  font-weight: bold;
+.modal-header {
+  background-color: #616161;
+  color: #ffffff;
+}
+.close {
+  color: #000;
 }
 .fa-trash {
   font-size: 20px;

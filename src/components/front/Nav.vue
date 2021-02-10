@@ -2,8 +2,8 @@
   <div>
     <div class="wrap">
       <ul class="nav">
-        <li class="nav-item">
-          <router-link class="nav-link" :to="{ name: 'Home' }">流浪貓狗助糧平台</router-link>
+        <li class="nav-item home">
+          <router-link class="nav-link" :to="{ name: 'Home' }">Strap-Help</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" :to="{ name: 'About' }">關於我們</router-link>
@@ -24,6 +24,10 @@ export default {
 
 <style scoped lang="scss">
 .nav-link {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 560;
+}
+.home {
+  font-family: Papyrus;
 }
 </style>

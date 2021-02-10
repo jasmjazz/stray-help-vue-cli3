@@ -1,17 +1,17 @@
 <template>
   <div>
-    <div class="wrap about">
-      <div class="banner">
-        <img src="../../assets/image/carousel01.png" class="img-fluid" alt="流浪貓狗助糧平台">
+    <div class="wrap">
+      <div class="about-banner">
+        <img src="../../assets/image/carousel08.png" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
-          <h1>關於我們</h1>
+          <h1>關我<br/>於們</h1>
         </div>
       </div>
-      <div class="row text">
+      <div class="row about-text">
         <div class="box">
           <h4>
             <i class="fas fa-paw"></i>
-            流浪貓狗助糧平台
+            Stray-Help
           </h4>
           <p>
             全台皆有配合的流浪貓狗園區<br/>
@@ -23,7 +23,7 @@
           </p>
         </div>
       </div>
-      <div class="row content">
+      <div class="row about-content">
         <div class="col-md-4 col-sm-12">
           <h5>
             <i class="far fa-calendar-alt"></i><br/>
@@ -32,7 +32,7 @@
           <p>
             周一至周五<br/>
             早上9:30-晚上5:30<br/>
-            <i class="fas fa-phone" style="font-size: 15px"></i>0809-095-995
+            <i class="fas fa-phone"></i>0809-095-995
           </p>
         </div>
         <div class="col-md-4 col-sm-12">
@@ -58,11 +58,10 @@
           </p>
         </div>
       </div>
-      <div class="row image">
-        <figure class="figure">
-          <img src="../../assets/image/img03.gif"
-          class="figure-img img-fluid rounded" alt="一起幫助浪浪">
-        </figure>
+      <div class="row map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.8775141113065!2d120.29054531491244!3d22.65835498513866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04f73415f453%3A0x8b48decafee6d97b!2z56S-5ZyY5rOV5Lq66auY6ZuE5biC6Zec5oe35rWB5rWq5YuV54mp5Y2U5pyD!5e0!3m2!1szh-TW!2stw!4v1612917608590!5m2!1szh-TW!2stw" width="1140" height="400" frameborder="0" style="border:0;"
+        allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
       </div>
     </div>
   </div>
@@ -81,6 +80,10 @@ export default {
 
 <style scoped lang="scss">
 .fa-paw {
+  margin-right: 5px;
+}
+.fa-phone {
+  font-size: 15px;
   margin-right: 5px;
 }
 </style>

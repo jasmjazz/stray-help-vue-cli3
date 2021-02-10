@@ -3,9 +3,9 @@
     <div class="wrap">
       <loading :active.sync="isLoading" loader="dots"></loading>
       <div class="products-banner">
-        <img src="../../assets/image/img05.png" class="img-fluid" alt="流浪貓狗助糧平台">
+        <img src="../../assets/image/products.png" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
-          <h1>愛心糧食</h1>
+          <h1>愛糧<br/>心食</h1>
         </div>
       </div>
       <div class="row">
@@ -38,7 +38,7 @@
       <div class="products-card">
         <div class="col-12">
           <div class="row">
-            <div class="card-group col-md-4"
+            <div class="card-group col-lg-4 col-md-6"
             v-for="item in products" :key="item.id">
               <div class="card border-0"
               @click="$router.push(`/detail/${item.id}`)">
@@ -116,7 +116,8 @@ export default {
 
 <style scoped lang="scss">
 .nav {
-  margin: 80px 0 35px 0;
+  margin: 60px 0 30px 0;
+  font-size: 16px;
 }
 .products-card {
   margin-bottom: 100px;

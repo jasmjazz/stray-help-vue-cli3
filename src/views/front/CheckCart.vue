@@ -2,8 +2,8 @@
   <div class="wrap">
     <loading :active.sync="isLoading" loader="dots"></loading>
     <Alert />
-    <div class="banner">
-      <img src="../../assets/image/picture04.png" class="img-fluid" alt="流浪貓狗助糧平台">
+    <div class="order-banner">
+      <img src="../../assets/image/picture05.png" class="img-fluid" alt="流浪貓狗助糧平台">
       <div class="text-box">
         <h1>助糧流程</h1>
       </div>
@@ -26,23 +26,26 @@
       </div>
     </div>
     <!--content-->
-    <div class="card border-1">
+    <div class="card checkcart-card border-1">
       <div class="card-body">
         <h4 v-if="cart.length === 0">還沒有選擇糧食哦！</h4>
         <ul v-else>
           <li v-for="item in cart" :key="item.id">
             <div class="row">
-              <div class="col-2 p-0">
+              <div class="col-1 p-0">
                 <a class="icon" href="#" @click.prevent="delCart(item.id)">
                   <i class="fas fa-trash trash"></i>
                 </a>
               </div>
-              <div class="col-7 p-0">
+              <div class="col-3 p-0">
+                <img :src="item.imageUrl" :alt="item.title">
+              </div>
+              <div class="col-5 p-0">
                 <div class="row">
-                  <div class="col-12 col-md-6">
+                  <div class="col-12 col-md-6 text-center">
                     <p>{{ item.title }}</p>
                   </div>
-                  <div class="col-12 col-md-6">
+                  <div class="col-12 col-md-6 text-center">
                     <i class="far fa-minus-square" @click="editNum(item, -1)"></i>
                     <span>{{ item.qty }}</span>
                     <i class="far fa-plus-square" @click="editNum(item, +1)"></i>
@@ -64,7 +67,7 @@
       </div>
     </div>
     <!--Button-->
-    <div class="row pay">
+    <div class="row">
       <div v-if="cart.length > 0" class="col text-right">
         <router-link :to="{ name: 'Products' }">
           <button type="button" class="btn btn-primary btn-back">
@@ -90,11 +93,11 @@
       <div class="col">
         <h6><i class="fas fa-exclamation-circle"></i>助糧須知</h6>
         <p>
-          ● 請確認資料是否正確，下單後未提供修改服務<br/>
-          ● 助糧完成後，7個工作天內送出愛心<br/>
-          ● 目前僅提供信用卡付款方式<br/>
-          ● 如需簽收單者，請務必填寫地址
-          </p>
+          ◆ 請確認資料是否正確，下單後未提供修改服務。<br/>
+          ◆ 助糧完成後，7個工作天內送出愛心。<br/>
+          ◆ 目前僅提供信用卡付款方式。<br/>
+          ◆ 如需簽收單，請務必填寫地址。
+        </p>
     </div>
     </div>
   </div>
@@ -174,25 +177,5 @@ export default {
 <style scoped lang="scss">
 li {
   list-style-type: none;
-}
-.card-body {
-  h4 {
-    line-height: 150px;
-    text-align: center;
-  }
-  p{
-    font-size: 17px;
-  }
-  span {
-    font-size: 18px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .price {
-    padding-right: 15px;
-  }
-}
-.fa-trash {
-  font-size: 18px;
 }
 </style>

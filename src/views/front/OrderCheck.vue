@@ -1,9 +1,9 @@
 <template>
-  <div class="order-check">
+  <div>
     <div class="wrap">
       <loading :active.sync="isLoading" loader="dots"></loading>
-      <div class="banner">
-        <img src="../../assets/image/picture04.png" class="img-fluid" alt="流浪貓狗助糧平台">
+      <div class="order-banner">
+        <img src="../../assets/image/picture05.png" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
           <h1>助糧流程</h1>
         </div>
@@ -110,7 +110,7 @@
               </div>
             </div>
           </h4>
-          <div class="text-right"  v-if="order.is_paid === true">
+          <div class="text-right mt-4"  v-if="order.is_paid === true">
             <button type="button" class="btn btn-primary"
               @click="$router.push('/products')">回去逛逛</button>
           </div>
@@ -188,10 +188,10 @@ export default {
       vm.isLoading = true;
       vm.$http.get(api).then((response) => {
         if (response.data.success) {
+          vm.isLoading = false;
           vm.order = response.data.order;
         }
       });
-      vm.isLoading = false;
     },
     payOrder() {
       const vm = this;
@@ -199,10 +199,10 @@ export default {
       vm.isLoading = true;
       vm.$http.post(api).then((response) => {
         if (response.data.success) {
+          vm.nextPage = true;
           vm.isLoading = false;
           vm.getOrder();
           $('#payModal').modal('show');
-          vm.nextPage = true;
         } else {
           vm.isLoading = false;
           vm.$bus.$emit('message: push', '付款失敗', 'danger');
@@ -222,6 +222,9 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
     const vm = this;
+    if (vm.order.is_paid) {
+      vm.nextPage = true;
+    }
     if (vm.nextPage) {
       next();
     } else {
@@ -245,6 +248,13 @@ export default {
 <style scoped lang="scss">
 .modal-header {
   background-color: #616161;
+  color: #ffffff;
+}
+.modal-body {
+  p {
+    margin-top: 15px;
+    font-size: 18px;
+  }
 }
 .btn-leave {
   opacity: 0.5;

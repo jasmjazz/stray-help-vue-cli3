@@ -1,38 +1,40 @@
 <template>
   <div>
-    <div class="container">
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        </ol>
+    <div class="carousel-box">
+      <div id="home-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../../assets/image/carousel04.png" class="d-block w-100" alt="流浪貓狗助糧平台">
+            <img src="../../assets/image/carousel01.jpg" class="d-block w-100 first"
+            alt="Stray-Help">
             <div class="text-box">
               <div class="carousel-caption d-md-block carousel-first">
-                <h1>流浪貓狗助糧平台</h1>
+                <h1>Stray-Help</h1><br/>
                 <p>對你來說<br/>
-                牠只是你人生的一部分</p>
+                牠只是你人生的一部分，</p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../../assets/image/carousel02.png" class="d-block w-100" alt="流浪貓狗助糧平台">
+            <img src="../../assets/image/carousel02.jpg" class="d-block w-100 second"
+            alt="Stray-Help">
             <div class="text-box">
               <div class="carousel-caption d-md-block carousel-second">
-                <h1>流浪貓狗助糧平台</h1>
+                <h1>Stray-Help</h1><br/>
                 <p>對牠來說<br/>
-                你卻是牠的全世界</p>
+                你卻是牠的全世界。</p>
               </div>
             </div>
           </div>
           <router-link :to="{ name: 'Products' }">
-            <button type="button" class="btn">
+            <button type="button" class="btn btn-dark">
               <i class="fas fa-chevron-right"></i>
               伸出援手
             </button>
           </router-link>
+          <ol class="carousel-indicators">
+            <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#home-carousel" data-slide-to="1"></li>
+          </ol>
         </div>
       </div>
     </div>
@@ -47,48 +49,70 @@
         </div>
       </div>
       <div class="content">
-        <div class="row">
+        <div class="row up">
           <div class="col-lg-5 col-md-12">
             <figure class="figure">
-              <img src="../../assets/image/picture09.png"
-              class="figure-img img-fluid rounded" alt="流浪貓">
+              <img src="../../assets/image/img01.png"
+              class="figure-img img-fluid rounded" alt="狗">
             </figure>
           </div>
-          <div class="col-lg-7 col-md-12 text">
-            <p>全台有許多流浪貓狗園區面臨缺糧的問題。
+          <div class="col-lg-7 col-md-12">
+            <p>全台有許多流浪貓狗園區面臨缺糧的問題。<br/>
               愛爸和愛媽給了流浪貓狗一個家，
               除了讓牠們免於受苦、受餓，
-              也大幅減少了社會環境的問題。
+              也大幅減少了社會環境的問題，
               隨著收容的數量急遽上升，
               能力有限的愛爸愛媽需要你我的幫助。
             </p>
             <p>
-              因為<span class="reason">疫情</span>關係，
-              <span class="reason">目前非常缺糧！</span><br/>
-              請援助我們度過難關，
-              至少讓牠們吃飽，讓牠們有更多時間等待下一個家。
+              <span class="reason">由於疫情的關係，目前非常缺糧！</span><br/>
+              請援助我們度過難關，至少讓牠們吃飽，
+              讓牠們有更多時間等待下一個家。
             </p>
             <p>
-              <span style="color: #616161">集食溫飽，捐糧不捐款。</span><br/>
-              讓我們集合每一個人的力量，溫飽牠們的每一餐，讓牠們不再流浪。
+              <span class="reason">捐糧不捐款</span><br/>
+              讓我們集合每一個人的力量，溫飽流浪貓狗的每一餐，讓牠們不再挨餓。
             </p>
           </div>
         </div>
         <div class="row slogan-two">
           <div class="col-12">
-            <h4>「一份糧食，一份希望。」</h4>
-            <hr/>
+            <h4>——— 「一份糧食，一份希望。」</h4>
+          </div>
+        </div>
+        <div class="row down">
+          <div class="col-lg-6 col-md-12">
+            <p>支持零安樂的情況下，我們似乎還有事情沒有做完…<br/>
+              邀請你和我們一起關懷流浪動物，用最基本的食物，<br/>持續照顧流浪貓狗的生活。
+            </p>
+            <p>讓愛不流浪，一起永續流浪貓狗的生命。</p>
+            <p>收留只是一個過程，<br/>希望有一天能夠找到屬於「自己」的家。</p>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <figure class="figure">
+              <img src="../../assets/image/img02.png"
+              class="figure-img img-fluid rounded" alt="貓">
+            </figure>
           </div>
         </div>
       </div>
-      <div class="box text-center">
+      <div class="box slogan-three">
+        <h4>——— 「能救一隻，就是多一隻。」</h4>
+      </div>
+      <div class="picture">
         <figure class="figure">
-          <img src="../../assets/image/picture02.png"
-          class="figure-img img-fluid rounded" alt="助糧流程">
+          <img src="../../assets/image/img03.png"
+          class="figure-img img-fluid rounded" alt="help">
         </figure>
+        <router-link :to="{ name: 'Products' }">
+          <button type="button" class="btn btn-dark">
+            <i class="fas fa-chevron-right"></i>
+            立即愛心捐糧
+          </button>
+        </router-link>
       </div>
       <div class="question">
-        <h3>Q & A 常見問題</h3>
+        <h3>Q & A</h3>
         <div class="box">
           <div class="accordion" id="accordionExample">
             <div class="card">
@@ -200,7 +224,7 @@
               <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
               data-parent="#accordionExample">
                 <div class="card-body">
-                  請至<span class="reason">「全國動物收容系統」</span>認養，
+                  請至<span style="color: red">「全國動物收容系統」</span>認養，
                   上面有各園區的最新資訊。<br/>
                   「以認養代替購買，愛牠就不要拋棄牠！」
                 </div>
@@ -208,40 +232,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="row slogan-three">
-        <div class="col-12">
-          <h4>——— 「能救一隻，就是多一隻。」</h4>
-        </div>
-      </div>
-      <div class="warm">
-        <div class="box">
-          <div class="card">
-            <div class="card-body">
-              <h5>
-                <span class="first-text">
-                  <i class="fas fa-exclamation-triangle"></i>
-                  165防詐騙宣導<br/>
-                  提醒您提高警覺，疑似詐騙請撥打165求證</span><br/>
-                <span class="second-text">
-                  ※若需簽收單，請加入 LINE@ 或來電洽詢<br/>
-                  ※若需報稅者，請與我們聯繫
-                </span><br/>
-                <router-link :to="{ name: 'Products' }">
-                  <button type="button" class="btn" >
-                    <i class="fas fa-chevron-right"></i> 立即愛心助糧
-                  </button>
-                </router-link>
-              </h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="picture">
-        <figure class="figure">
-          <img src="../../assets/image/picture01.png"
-          class="figure-img img-fluid rounded" alt="愛心助糧">
-        </figure>
       </div>
     </div>
     <div class="arrow"><i class="fas fa-angle-double-up"></i></div>

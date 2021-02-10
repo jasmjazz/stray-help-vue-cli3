@@ -1,61 +1,33 @@
 .products-banner {
+  font-family: "微軟正黑體";
+  position: relative;
+  width: 100%;
+  height: 42vh;
   img {
     width: 100%;
-    height: 45vh;
+    height: 42vh;
     object-fit: cover;
-    object-position: 50% 90%;
+    object-position: 50% 80%;
     border-radius: 5px;
   }
   .text-box {
     position: absolute;
     margin: 0;
-    top: 30%;
-    left: 46%;
-    transform: translate(-38%, -46%);
-    width: calc(100% - 70%);
-    height: calc(100% - 80%);
-    background-color: rgba(0, 0, 0, 0.25);
-    z-index: 1;
-    border-radius: 10px;
-    @include large {
-      width: calc(100% - 50%);
-      height: calc(100% - 80%);
-    }
-    @include x-small {
-      width: calc(100% - 40%);
-      height: calc(100% - 85%);
-    }
+    top: 22%;
+    right: 5%;
+    transform: translateX(-22%);
+    background-color: #fff;
+    border-radius: 5px;
+    border: 5px double #000;
     h1 {
-      font-weight: bold;
-      letter-spacing: 3px;
-      font-size: 60px;
-      color: #ffffff;
-      line-height: 150px;
-      text-align: center;
-      @include large {
-        font-size: 60px;
-        line-height: 280px;
-      }
-      @include medium {
-        font-size: 60px;
-        line-height: 200px;
-      }
-      @include x-small {
-        font-size: 36px;
-        line-height: 120px;
-      }
+      padding: 25px 0 5px 0;
+      writing-mode: vertical-lr;
+      letter-spacing: 20px;
+      font-weight: bolder;
     }
   }
 }
 
 .title {
   font-weight: bold;
-}
-.cart {
-  font-size: 30px;
-  vertical-align: middle;
-  p {
-    text-align: right;
-    letter-spacing: 1px;
-  }
 }

@@ -4,9 +4,9 @@
       <loading :active.sync="isLoading" loader="dots"></loading>
       <Alert />
       <div class="products-banner">
-        <img src="../../assets/image/img05.png" class="img-fluid" alt="流浪貓狗助糧平台">
+        <img src="../../assets/image/products.png" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
-          <h1>愛心糧食</h1>
+          <h1>愛糧<br/>心食</h1>
         </div>
       </div>
       <div class="row">
@@ -16,7 +16,7 @@
               <router-link :to="{ name: 'Products' }">糧食列表</router-link>
             </a>
             <span>/</span>
-            <a class="nav-link" href="#" style="font-weight: bolder">詳細</a>
+            <p class="nav-link" href="#" style="font-weight: bolder">詳細</p>
           </nav>
         </div>
         <div class="col-1">
@@ -85,7 +85,7 @@
             「滴水之情，激起漣漪。」<br/>
             歲末寒冬之際，流浪貓狗園區依然為糧食奔波與追尋；
             請與我們一起愛護浪浪家園，
-            部分園區因為配送問題，物資取得不容易，所以我們親自配送你的心意直達園區。
+            部分園區因為距離問題，物資取得不容易，所以我們親自配送你的心意直達園區。
             眼下發生的事情還有很多，你的愛心是對牠們大大的幫助。
           </p>
         </div>
@@ -225,10 +225,15 @@ export default {
 
 <style scoped lang="scss">
 .nav {
-  margin: 80px 0 35px 0;
+  margin: 60px 0 30px 0;
   font-size: 16px;
+  color: #616161;
   span {
     padding-top: 7px;
+    cursor: default;
+  }
+  p {
+    cursor: default;
   }
 }
 h3 {

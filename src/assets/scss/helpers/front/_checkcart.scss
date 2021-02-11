@@ -1,6 +1,8 @@
 //共用
 .order-banner {
   font-family: "微軟正黑體";
+  position: relative;
+  height: 42vh;
   img {
     width: 100%;
     height: 42vh;
@@ -10,15 +12,17 @@
   }
   .text-box {
     position: absolute;
-    margin: 0;
-    top: 30%;
-    left: 43%;
-    transform: translate(-30%, -43%);
-    width: calc(100% - 65%);
-    height: calc(100% - 80%);
+    top: 50%;
+    left: 32.5%;
+    transform: translateX(-32.5%);
+    transform: translateY(-50%);
+    width: calc(100% - 62%);
+    height: calc(100% - 55%);
     z-index: 1;
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
     border: 5px double #000;
+    text-align: center;
     @include large {
       top: 25%;
       left: 40%;
@@ -34,11 +38,13 @@
       height: calc(100% - 85%);
     }
     h1 {
-      font-weight: bold;
+      padding-left: 12px;
+      text-align: center;
       letter-spacing: 5px;
       font-size: 60px;
-      line-height: 140px;
-      text-align: center;
+      line-height: 145px;
+      color: #333;
+      -webkit-text-stroke: 1px #000;
       @include large {
         font-size: 60px;
         line-height: 125px;

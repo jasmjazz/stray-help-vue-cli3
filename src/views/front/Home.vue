@@ -4,7 +4,7 @@
       <div id="home-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../../assets/image/carousel01.jpg" class="d-block w-100 first"
+            <img src="../../assets/image/img02.jpg" class="d-block w-100"
             alt="Stray-Help">
             <div class="text-box">
               <div class="carousel-caption d-md-block carousel-first">
@@ -15,9 +15,9 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../../assets/image/carousel02.jpg" class="d-block w-100 second"
+            <img src="../../assets/image/img01.jpg" class="d-block w-100"
             alt="Stray-Help">
-            <div class="text-box">
+            <div class="text-box second">
               <div class="carousel-caption d-md-block carousel-second">
                 <h1>Stray-Help</h1><br/>
                 <p>對牠來說<br/>
@@ -52,7 +52,7 @@
         <div class="row up">
           <div class="col-lg-5 col-md-12">
             <figure class="figure">
-              <img src="../../assets/image/img01.png"
+              <img src="../../assets/image/img09.jpg"
               class="figure-img img-fluid rounded" alt="狗">
             </figure>
           </div>
@@ -82,7 +82,7 @@
         </div>
         <div class="row down">
           <div class="col-lg-6 col-md-12">
-            <p>支持零安樂的情況下，我們似乎還有事情沒有做完…<br/>
+            <p>支持零安樂的情況下，我們似乎還有事情沒有做完，<br/>
               邀請你和我們一起關懷流浪動物，用最基本的食物，<br/>持續照顧流浪貓狗的生活。
             </p>
             <p>讓愛不流浪，一起永續流浪貓狗的生命。</p>
@@ -90,7 +90,7 @@
           </div>
           <div class="col-lg-6 col-md-12">
             <figure class="figure">
-              <img src="../../assets/image/img02.png"
+              <img src="../../assets/image/img06.jpg"
               class="figure-img img-fluid rounded" alt="貓">
             </figure>
           </div>

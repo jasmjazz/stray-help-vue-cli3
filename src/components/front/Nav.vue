@@ -26,6 +26,7 @@ export default {
 .nav-link {
   font-size: 18px;
   font-weight: 560;
+  color: #616161;
 }
 .home {
   font-family: Papyrus;

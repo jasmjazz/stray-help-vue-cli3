@@ -2,9 +2,9 @@
   <div>
     <div class="wrap">
       <div class="about-banner">
-        <img src="../../assets/image/carousel08.png" class="img-fluid" alt="流浪貓狗助糧平台">
+        <img src="../../assets/image/img07.jpg" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
-          <h1>關我<br/>於們</h1>
+          <h1>關於我們</h1>
         </div>
       </div>
       <div class="row about-text">

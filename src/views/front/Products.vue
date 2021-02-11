@@ -5,7 +5,7 @@
       <div class="products-banner">
         <img src="../../assets/image/products.png" class="img-fluid" alt="流浪貓狗助糧平台">
         <div class="text-box">
-          <h1>愛糧<br/>心食</h1>
+          <h1>愛心糧食</h1>
         </div>
       </div>
       <div class="row">

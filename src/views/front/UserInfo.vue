@@ -40,7 +40,7 @@
               <!--表單-->
               <ValidationObserver v-slot="{ handleSubmit }">
               <div class="my-2 row justify-content-center">
-                <form class="col-md-6" @submit.prevent="handleSubmit(createOrder)">
+                <form class="col-md-6" @submit.prevent="handleSubmit(addCart)">
                   <div class="form-group">
                     <label for="username">捐助人姓名 *</label>
                     <ValidationProvider rules="required" v-slot="{ errors , classes }">
@@ -155,10 +155,8 @@ export default {
     },
     createOrder() {
       const vm = this;
-      vm.addCart();
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/order`;
       const order = vm.form;
-      vm.isLoading = true;
       vm.$http.post(api, { data: order }).then((response) => {
         if (response.data.success) {
           vm.nextPage = true;
@@ -175,13 +173,16 @@ export default {
       const vm = this;
       const api = `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_CUSTOM}/cart`;
       vm.cart = JSON.parse(localStorage.getItem('cart')) || [];
+      vm.isLoading = true;
       vm.cart.forEach((item) => {
         const product = {
           product_id: item.id,
           qty: item.qty,
         };
         vm.$http.post(api, { data: product }).then((response) => {
-          if (!response.data.success) {
+          if (response.data.success) {
+            vm.createOrder();
+          } else {
             vm.$bus.$emit('message: push', response.data.message, 'danger');
           }
         });

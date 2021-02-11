@@ -24,7 +24,7 @@ export default {
 
 <style scoped lang="scss">
 .nav-link {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 560;
   color: #616161;
 }

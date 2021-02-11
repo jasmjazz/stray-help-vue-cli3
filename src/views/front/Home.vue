@@ -4,7 +4,7 @@
       <div id="home-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../../assets/image/img02.jpg" class="d-block w-100"
+            <img src="../../assets/image/carousel01.jpg" class="d-block w-100"
             alt="Stray-Help">
             <div class="text-box">
               <div class="carousel-caption d-md-block carousel-first">
@@ -15,7 +15,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="../../assets/image/img01.jpg" class="d-block w-100"
+            <img src="../../assets/image/carousel02.jpg" class="d-block w-100"
             alt="Stray-Help">
             <div class="text-box second">
               <div class="carousel-caption d-md-block carousel-second">

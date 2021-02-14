@@ -71,7 +71,6 @@ span {
       height: calc(100% - 65%);
     }
     @include x-small {
-      left: 28%;
       width: calc(100% - 10%);
       height: calc(100% - 64%);
     }
@@ -226,7 +225,7 @@ span {
 
 .slogan-two {
   margin: 120px 0 120px 0;
-  text-align: right;
+  text-align: center;
   h4 {
     font-weight: bold;
   }

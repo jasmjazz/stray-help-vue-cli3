@@ -7,13 +7,13 @@
           <span>Admin</span>
         </h5>
         <li class="nav-item">
-          <router-link class="nav-link" to='/admin/feed'>
+          <router-link class="nav-link" to='/admin/feed' active-class="active">
             <i class="fas fa-box-open"></i>
             糧食列表
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to='/admin/orders'>
+          <router-link class="nav-link" to='/admin/orders' active-class="active">
             <i class="far fa-list-alt"></i>
             訂單列表
           </router-link>

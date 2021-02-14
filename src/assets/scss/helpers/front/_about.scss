@@ -23,6 +23,11 @@
     border-radius: 5px;
     border: 5px double #000;
     text-align: center;
+    @include x-small {
+      width: calc(100% - 20%);
+      height: calc(100% - 55%);
+      left: 10%;
+    }
     h1 {
       padding-left: 12px;
       text-align: center;
@@ -31,6 +36,16 @@
       line-height: 145px;
       color: #333;
       -webkit-text-stroke: 1px #000;
+      @include large {
+        line-height: 250px;
+      }
+      @include medium {
+        font-size: 45px;
+        line-height: 185px;
+      }
+      @include x-small {
+        line-height: 140px;
+      }
     }
   }
 }

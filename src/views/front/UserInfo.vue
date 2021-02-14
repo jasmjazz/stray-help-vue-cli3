@@ -74,7 +74,7 @@
                   </div>
                   <div class="form-group">
                     <label for="useraddress">
-                      捐助人地址<span style="color: green">（如需園區簽收單，請務必填寫）</span>
+                      捐助人地址<span class="note">（如需園區簽收單，請務必填寫）</span>
                     </label>
                     <input type="text" class="form-control" name="address" id="useraddress"
                       v-model="form.user.address" placeholder="請輸入地址">

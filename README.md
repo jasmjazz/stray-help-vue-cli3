@@ -32,7 +32,7 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 *  Bootstrap
 *  SCSS
 *  LocalStorage
-*  ESLint (eslint-config-airbnb)
+*  ESLint (eslint-config-airbnb)  
 
 ## 前台介紹  
 ### 首頁  
@@ -70,7 +70,7 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 *  產品管理：新增、修改及刪除產品資訊  
 *  訂單管理：查看訂單資訊  
   
-![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/dashboard.gif)  
+![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/dashboard.gif)
 
 ## 聲明
 *  圖片來源：[Unsplash](https://unsplash.com/)、[Pexels](https://www.pexels.com/zh-tw/)、[自然食](https://www.natural10.com.tw/)

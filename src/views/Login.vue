@@ -15,7 +15,7 @@
             <input type="password" id="inputPassword" class="form-control"
               placeholder="Password" v-model="user.password" required>
             <button class="btn btn-lg btn-block mt-4" type="submit">Sign In</button>
-            <p class="mt-5 mb-3 text-muted text-center">&copy; 2021 Stray Help</p>
+            <p class="mt-5 mb-3 text-muted text-center">&copy; 2021 Stray-Help</p>
           </form>
         </div>
       </div>

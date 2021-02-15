@@ -62,7 +62,7 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
   
 ## 後台介紹  
 ### 管理者登入  
-*  驗證帳號及密碼  
+*  管理者登入及登出 
   
 ![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/login.png)  
 

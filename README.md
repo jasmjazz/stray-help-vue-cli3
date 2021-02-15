@@ -37,5 +37,5 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 
 ## 聲明
 *  圖片來源：[Unsplash](https://unsplash.com/)、[Pexels](https://www.pexels.com/zh-tw/)、[自然食](https://www.natural10.com.tw/)
-*  僅作為個人練習之用，無任何商業用途
+*  本作品僅作為個人練習之用，無任何商業用途。
 

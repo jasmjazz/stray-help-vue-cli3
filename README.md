@@ -34,7 +34,10 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 *  LocalStorage
 *  ESLint (eslint-config-airbnb)
 
-### Run your tests
+##前台介紹  
+###首頁  
+*  圖片輪播、導覽、Q&A  
+![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/home.gif)
 
 
 ## 聲明

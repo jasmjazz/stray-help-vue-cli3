@@ -1,13 +1,14 @@
-# Stray_Help(Vue-Cli3)
+# Stray-Help(Vue-Cli3)
 
-### Demo
+## Demo
 
 https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 
 
-### 簡介
+## 簡介
 
-以 Vue.js 框架實作網站，功能區分為前、後台
+以 Vue.js 框架實作網站，功能區分為前、後台：
+● 前台
 
 
 ### Compiles and minifies for production

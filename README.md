@@ -58,7 +58,19 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 *  填寫基本資料
 *  呈現訂單資訊  
   
-![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/check.gif)
+![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/check.gif)  
+  
+## 後台介紹  
+### 管理者登入  
+*  驗證帳號及密碼  
+  
+![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/login.png)  
+
+### 產品管理  
+*  產品管理：新增、修改及刪除產品資訊  
+*  訂單管理：查看訂單資訊  
+  
+![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/dashboard.gif)  
 
 ## 聲明
 *  圖片來源：[Unsplash](https://unsplash.com/)、[Pexels](https://www.pexels.com/zh-tw/)、[自然食](https://www.natural10.com.tw/)

@@ -44,8 +44,21 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 *  選擇產品種類  
 *  查看產品詳情  
   
-![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/products.gif)
-
+![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/products.gif)  
+  
+### 產品詳細  
+*  選擇產品數量並加入購物車  
+*  顯示同種類相關產品  
+  
+![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/detail.gif)  
+  
+### 結帳流程  
+*  查看購物車
+*  調整購買品項及數量
+*  填寫基本資料
+*  呈現訂單資訊  
+  
+![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/check.gif)
 
 ## 聲明
 *  圖片來源：[Unsplash](https://unsplash.com/)、[Pexels](https://www.pexels.com/zh-tw/)、[自然食](https://www.natural10.com.tw/)

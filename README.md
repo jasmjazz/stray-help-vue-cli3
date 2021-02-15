@@ -1,5 +1,5 @@
 # Stray-Help(Vue-Cli3)
-![image](picture or gif url)
+![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/home.png)
 
 ## Demo
 

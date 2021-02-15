@@ -1,4 +1,5 @@
 # Stray-Help(Vue-Cli3)
+![image](picture or gif url)
 
 ## Demo
 
@@ -21,7 +22,7 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 
 
 ## 主要技術
-*  JacaScript(ES6)
+*  JacaScript (ES6)
 *  Vue-Cli3
 *  VueRouter
 *  Webpack
@@ -30,7 +31,7 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 *  Bootstrap
 *  SCSS
 *  LocalStorage
-*  ESLint(eslint-config-airbnb)
+*  ESLint (eslint-config-airbnb)
 
 ### Run your tests
 

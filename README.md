@@ -37,11 +37,13 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 ## 前台介紹  
 ### 首頁  
 *  圖片輪播、導覽、Q&A  
+  
 ![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/home.gif)
 
 ### 產品列表  
 *  選擇產品種類  
 *  查看產品詳情  
+  
 ![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/products.gif)
 
 

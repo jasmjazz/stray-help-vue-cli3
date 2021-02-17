@@ -40,10 +40,10 @@
     </div>
     <div class="wrap">
       <div class="row slogan-one">
-        <div class="col-lg-5 col-md-12">
+        <div class="col-lg-3 col-md-3 col-sm-12">
           <div class="heart"></div>
         </div>
-        <div class="col-lg-7 col-md-12">
+        <div class="col-lg-9 col-md-9 col-sm-12">
           <h4>「集食，給予最實質的幫助。」</h4>
           <hr/>
         </div>
@@ -83,7 +83,7 @@
               邀請你和我們一起關懷流浪貓狗們，用最基本的食物，照顧牠們的生活。
             </p>
             <p>讓愛不流浪，一起永續流浪貓狗們的生命。<br/>
-              收留只是一個過程，希望有一天能夠找到屬於「自己」的家。</p>
+              收留只是一個過程，希望有一天能夠找到屬於自己的家。</p>
           </div>
           <div class="col-lg-6 col-md-12">
             <figure class="figure">

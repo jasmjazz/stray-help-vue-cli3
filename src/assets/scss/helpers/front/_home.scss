@@ -48,7 +48,11 @@ span {
     height: 85vh;
     object-fit: cover; // 填滿容器
     object-position: 50% 50%;
+    border-radius: 10px;
     opacity: 0.95;
+    @include large {
+      border-radius: 0;
+    }
   }
   .text-box {
     position: absolute;
@@ -109,19 +113,14 @@ span {
   margin: 120px 0 150px 0;
   text-align: right;
   @include x-small {
+    text-align: center;
     margin: 80px 0 80px 0;
   }
   .heart {
     position: relative;
     width: 50px;
     height: 100px;
-    left: 30%;
-    transform: translateX(-30%);
     animation: animate 2s linear infinite;
-    @include medium {
-      left: 10%;
-      transform: translateX(-10%);
-    }
     @include x-small {
       left: 25%;
       transform: translateX(-25%);
@@ -134,7 +133,8 @@ span {
     width: 50px;
     height: 100px;
     background-color: red;
-    border-radius: 50px 50px 0 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
     transform: rotate(-45deg);
   }
   .heart::before {
@@ -144,7 +144,8 @@ span {
     width: 50px;
     height: 100px;
     background-color: red;
-    border-radius: 50px 50px 0 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
     transform: rotate(45deg);
   }
   @keyframes animate {

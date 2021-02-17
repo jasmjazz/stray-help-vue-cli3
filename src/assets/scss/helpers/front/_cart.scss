@@ -5,6 +5,9 @@
   background-color: #ffffff;
   border-radius: 100em;
   border: 1px solid #bdbdbd;
+  @include large {
+    margin-right: 30px;
+  }
   @include x-small {
     display: none;
   }
@@ -67,8 +70,9 @@
   display: none;
   @include x-small {
     display: block;
-    margin-top: -45px;
     cursor: pointer;
+    margin-top: -50px;
+    margin-right: 5px;
     z-index: 100;
     background-color: #ffffff;
     border-radius: 100em;

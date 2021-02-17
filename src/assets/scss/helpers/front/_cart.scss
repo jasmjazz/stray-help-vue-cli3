@@ -1,5 +1,5 @@
 .desk-cart-empty {
-  margin-top: -25px;
+  margin-top: -45px;
   cursor: pointer;
   z-index: 100;
   background-color: #ffffff;
@@ -25,7 +25,7 @@
 }
 
 .desk-cart {
-  margin-top: -25px;
+  margin-top: -45px;
   cursor: pointer;
   z-index: 100;
   background-color: #ffffff;
@@ -67,7 +67,7 @@
   display: none;
   @include x-small {
     display: block;
-    margin-top: -25px;
+    margin-top: -45px;
     cursor: pointer;
     z-index: 100;
     background-color: #ffffff;
@@ -94,7 +94,7 @@
   display: none;
   @include x-small {
     display: block;
-    margin-top: -25px;
+    margin-top: -45px;
     cursor: pointer;
     z-index: 100;
     background-color: #ffffff;

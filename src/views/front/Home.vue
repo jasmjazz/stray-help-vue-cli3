@@ -40,10 +40,10 @@
     </div>
     <div class="wrap">
       <div class="row slogan-one">
-        <div class="col-lg-3 col-md-12">
+        <div class="col-lg-5 col-md-12">
           <div class="heart"></div>
         </div>
-        <div class="col-lg-9 col-md-12">
+        <div class="col-lg-7 col-md-12">
           <h4>「集食，給予最實質的幫助。」</h4>
           <hr/>
         </div>
@@ -57,7 +57,7 @@
             </figure>
           </div>
           <div class="col-lg-7 col-md-12">
-            <p>全台有許多流浪貓狗園區面臨缺糧的問題。<br/>
+            <p>全台有許多流浪貓狗園區面臨缺糧的問題。
               愛爸和愛媽給了流浪貓狗一個家，
               除了讓牠們免於受苦、受餓，
               也大幅減少了社會環境的問題，
@@ -65,28 +65,25 @@
               能力有限的愛爸愛媽需要你我的幫助。
             </p>
             <p>
-              <span class="reason">由於疫情的關係，目前非常缺糧！</span><br/>
-              請援助我們度過難關，至少讓牠們吃飽，
+              由於疫情的關係，目前非常缺糧。
+              請援助我們度過難關，至少讓流浪貓狗們吃飽，
               讓牠們有更多時間等待下一個家。
-            </p>
-            <p>
-              <span class="reason">捐糧不捐款</span><br/>
-              讓我們集合每一個人的力量，溫飽流浪貓狗的每一餐，讓牠們不再挨餓。
+              讓我們集合每一個人的力量，溫飽流浪貓狗們的每一餐，讓牠們不再挨餓。
             </p>
           </div>
         </div>
         <div class="row slogan-two">
           <div class="col-12">
-            <h4>——— 「一份糧食，一份希望。」</h4>
+            <h4>—— 「一份糧食，一份希望。」</h4>
           </div>
         </div>
         <div class="row down">
           <div class="col-lg-6 col-md-12">
-            <p>支持零安樂的情況下，我們似乎還有事情沒有做完，<br/>
-              邀請你和我們一起關懷流浪動物，用最基本的食物，<br/>持續照顧流浪貓狗的生活。
+            <p>支持零安樂的情況下，我們似乎還有事情沒有做完，
+              邀請你和我們一起關懷流浪貓狗們，用最基本的食物，照顧牠們的生活。
             </p>
-            <p>讓愛不流浪，一起永續流浪貓狗的生命。</p>
-            <p>收留只是一個過程，<br/>希望有一天能夠找到屬於「自己」的家。</p>
+            <p>讓愛不流浪，一起永續流浪貓狗們的生命。<br/>
+              收留只是一個過程，希望有一天能夠找到屬於「自己」的家。</p>
           </div>
           <div class="col-lg-6 col-md-12">
             <figure class="figure">
@@ -97,7 +94,7 @@
         </div>
       </div>
       <div class="box slogan-three">
-        <h4>——— 「能救一隻，就是多一隻。」</h4>
+        <h4>—— 「能救一隻，就是多一隻。」</h4>
       </div>
       <div class="picture">
         <figure class="figure">

@@ -1,12 +1,12 @@
 .desk-cart-empty {
-  margin-top: -45px;
+  margin-top: -25px;
   cursor: pointer;
   z-index: 100;
   background-color: #ffffff;
   border-radius: 100em;
   border: 1px solid #bdbdbd;
   @include large {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   @include x-small {
     display: none;
@@ -15,7 +15,7 @@
     width: 65px;
     height: 65px;
     z-index: 100;
-    padding-top: 18px;
+    padding-top: 19px;
     padding-left: 14px;
     border-radius: 100em;
     position: relative;
@@ -28,12 +28,15 @@
 }
 
 .desk-cart {
-  margin-top: -45px;
+  margin-top: -25px;
   cursor: pointer;
   z-index: 100;
   background-color: #ffffff;
   border-radius: 100em;
   border: 1px solid #bdbdbd;
+  @include large {
+    margin-right: 20px;
+  }
   @include x-small {
     display: none;
   }
@@ -71,8 +74,8 @@
   @include x-small {
     display: block;
     cursor: pointer;
-    margin-top: -50px;
-    margin-right: 5px;
+    margin-top: -25px;
+    margin-right: 10px;
     z-index: 100;
     background-color: #ffffff;
     border-radius: 100em;
@@ -82,7 +85,7 @@
     width: 65px;
     height: 65px;
     z-index: 100;
-    padding-top: 18px;
+    padding-top: 19px;
     padding-left: 14px;
     border-radius: 100em;
     position: relative;
@@ -98,7 +101,8 @@
   display: none;
   @include x-small {
     display: block;
-    margin-top: -45px;
+    margin-top: -25px;
+    margin-right: 10px;
     cursor: pointer;
     z-index: 100;
     background-color: #ffffff;

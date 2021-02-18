@@ -325,7 +325,6 @@ span {
 
 .footer {
   font-family: Papyrus;
-  font-weight: bolder;
   padding-top: 5px;
 }
 .footer-text {
@@ -335,11 +334,14 @@ span {
     margin-left: 10px;
   }
   p {
+    font-weight: bolder;
+    font-size: 18px;
     @include x-small {
       font-size: 10px;
     }
   }
   h5 {
+    font-weight: 600;
     @include x-small {
       font-size: 14px;
     }
@@ -348,7 +350,7 @@ span {
 
 .footer-icon img {
   position: absolute;
-  top: 55px;
+  top: 50px;
   right: 15px;
   width: 40px;
   height: 40px;

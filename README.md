@@ -24,8 +24,8 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 
 ## 主要技術
 *  JacaScript (ES6)
-*  Vue-Cli3
-*  VueRouter
+*  Vue CLI3
+*  Vue Router
 *  Webpack
 *  Axios
 *  jQuery
@@ -33,6 +33,9 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 *  SCSS
 *  LocalStorage
 *  ESLint (eslint-config-airbnb)  
+
+## API  
+https://github.com/hexschool/vue-course-api-wiki/wiki
 
 ## 前台介紹  
 ### 首頁  

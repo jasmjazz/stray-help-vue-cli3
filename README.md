@@ -1,4 +1,4 @@
-# Stray-Help(Vue C3)
+# Stray-Help(Vue CLI3)
 
 ![image](https://github.com/jasmjazz/stray-help-vue-cli3/blob/master/src/assets/demo/home.png)
 

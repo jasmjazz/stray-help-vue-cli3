@@ -33,9 +33,6 @@ https://jasmjazz.github.io/stray-help-vue-cli3/dist/#/
 *  SCSS
 *  LocalStorage
 *  ESLint (eslint-config-airbnb)  
-
-## API  
-https://github.com/hexschool/vue-course-api-wiki/wiki
   
 ## 前台介紹  
 ### 首頁  
